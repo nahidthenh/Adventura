@@ -1,14 +1,9 @@
-
-import { Container } from 'react-bootstrap'
-
+import { RouterProvider } from "react-router-dom"
+import { router } from "./Routes/Routes"
 function App() {
-
-
   return (
     <>
-      <Container>
-        <h2>Hello World</h2>
-      </Container>
+      <RouterProvider router={router} />
     </>
   )
 }
