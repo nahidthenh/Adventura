@@ -253,15 +253,13 @@ img.header-logo {
         height: 80px;
         line-height: 80px;
         background: #fff;
-        background: $ColorThemePrimary;
         text-align: center;
         border-radius: 50%;
         font-size: 30px;
         box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.06);
 
         i {
-            color: $ColorThemeSecondary;
-            color: #fff;
+            color: $ColorThemePrimary;
         }
     }
 
