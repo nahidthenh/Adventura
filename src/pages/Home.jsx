@@ -5,8 +5,7 @@ const Home = () => {
         <Container className="default-margin-top">
             <Row>
                 <Col>
-                    <h3>Home</h3>
-                  
+                    
                 </Col>
             </Row>
         </Container>

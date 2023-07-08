@@ -1,10 +1,15 @@
+import { Col, Container, Row } from "react-bootstrap";
 
 
 const Blog = () => {
     return (
-        <div>
-            Blog
-        </div>
+        <Container className="default-margin-top">
+            <Row>
+                <Col>
+                    <h3>Blog</h3>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 
