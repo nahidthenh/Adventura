@@ -1,3 +1,7 @@
+$ColorBlack: #000;
+$ColorThemePrimary:#061a3a;
+$ColorThemeSecondary:#ff7c5b;
+
 body {
     font-family: 'Work Sans',
         sans-serif !important;
@@ -7,4 +11,33 @@ body {
 
 img.header-logo {
     width: 120px;
+}
+
+.navbar-nav {
+    a {
+        position: relative;
+        display: block;
+        text-align: center;
+        font-size: 17px;
+        line-height: 30px;
+        font-weight: 500;
+        opacity: 1;
+        color: $ColorThemePrimary;
+        z-index: 1;
+        -webkit-transition: all 500ms ease;
+        -moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+        margin-left: 25px;
+        text-decoration: none;
+
+        &:hover {
+            color: $ColorThemeSecondary;
+        }
+    }
+
+    .active {
+        color: $ColorThemeSecondary;
+    }
 }
