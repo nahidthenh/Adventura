@@ -1,14 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import {
-
     Error,
     Blog,
     Home,
     Destination,
     Contact,
     Profile
-
 } from '../pages/index'
 export const router = createBrowserRouter([
     {
