@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useState, useEffect } from "react";
 
 const Home = () => {
-    const [responseData, setResponseData] = useState([]);
+    const [whyus, setWhyus] = useState([]);
 
     useEffect(() => {
         fetchData();
@@ -14,7 +14,7 @@ const Home = () => {
     async function fetchData() {
         try {
             const response = await axios.get('http://localhost:5000/whyus');
-            setResponseData(response.data);
+            setWhyus(response.data);
         } catch (error) {
             console.error(error);
         }
@@ -63,7 +63,7 @@ const Home = () => {
                     </Row>
                 </Container>
             </div>
-            <div className="why-us">
+            <div className="why-us pb-5">
                 <Container>
                     <div className="section-title text-center">
                         <p>Adventura Specials</p>
@@ -72,12 +72,20 @@ const Home = () => {
                     <Row>
                         <Col>
                             {/* Display the response data */}
-                            {responseData && (
-                                <ul>
-                                    {responseData.map(item => (
-                                        <li key={item.id}>{item.title}</li>
+                            {whyus && (
+                                <Row>
+                                    {whyus.map(item => (
+                                        <Col lg={3} md={6} sm={12} key={item.id}>
+                                            <div className="why-us-block">
+                                                <img className="img-fluid" src={item.photo} alt="photo" />
+                                                <div className="lower-content">
+                                                    <div className="why-us-icon"><i className={item.icon}></i></div>
+                                                    <h3>{item.title}</h3>
+                                                </div>
+                                            </div>
+                                        </Col>
                                     ))}
-                                </ul>
+                                </Row>
                             )}
                         </Col>
                     </Row>

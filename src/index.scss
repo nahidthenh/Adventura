@@ -198,3 +198,47 @@ img.header-logo {
         margin-bottom: 44px;
     }
 }
+
+// Why us Section 
+.why-us-block {
+    position: relative;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.08);
+
+    img {
+        width: 100%;
+    }
+
+    .lower-content {
+        position: relative;
+        display: block;
+        padding: 60px 15px 25px 15px;
+
+        h3 {
+            text-align: center;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 600;
+            color: $ColorThemePrimary;
+        }
+    }
+
+    .why-us-icon {
+        position: absolute;
+        left: 50%;
+        top: -40px;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        background: #fff;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 40px;
+        box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.06);
+    }
+
+}
