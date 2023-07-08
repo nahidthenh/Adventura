@@ -5,10 +5,10 @@ import { Link, NavLink } from "react-router-dom";
 const Header = () => {
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" className="bg-white py-3 border-bottom">
+            <Navbar collapseOnSelect expand="lg" className="bg-white py-3 border-bottom" fixed="top">
                 <Container>
                     <Navbar.Brand as={Link} to='/'>
-                        <img className="header-logo" src={headerLogo} alt="" />
+                        <img className="header-logo" src={headerLogo} alt="Header Logo" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
