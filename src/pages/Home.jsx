@@ -1,8 +1,25 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { BiSearch } from "react-icons/bi";
 import heroImage from '../assets/images/hero.png'
+import axios from 'axios';
+import { useState, useEffect } from "react";
 
 const Home = () => {
+    const [responseData, setResponseData] = useState([]);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    async function fetchData() {
+        try {
+            const response = await axios.get('http://localhost:5000/whyus');
+            setResponseData(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
     return (
         <div className="default-margin-top">
             <div className="hero-area-wrap py-5">
@@ -42,6 +59,26 @@ const Home = () => {
                         </Col>
                         <Col lg={6} sm={12} md={12}>
                             <img className="img-fluid" src={heroImage} alt="Hero area images" />
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+            <div className="why-us">
+                <Container>
+                    <div className="section-title text-center">
+                        <p>Adventura Specials</p>
+                        <h2>Why Travel with Adventura?</h2>
+                    </div>
+                    <Row>
+                        <Col>
+                            {/* Display the response data */}
+                            {responseData && (
+                                <ul>
+                                    {responseData.map(item => (
+                                        <li key={item.id}>{item.title}</li>
+                                    ))}
+                                </ul>
+                            )}
                         </Col>
                     </Row>
                 </Container>
