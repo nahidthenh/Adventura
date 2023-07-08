@@ -65,7 +65,7 @@ const Home = () => {
             </div>
             <div className="why-us pb-5">
                 <Container>
-                    <div className="section-title text-center">
+                    <div className="section-title text-center pb-5">
                         <p>Adventura Specials</p>
                         <h2>Why Travel with Adventura?</h2>
                     </div>
@@ -77,7 +77,9 @@ const Home = () => {
                                     {whyus.map(item => (
                                         <Col lg={3} md={6} sm={12} key={item.id}>
                                             <div className="why-us-block">
-                                                <img className="img-fluid" src={item.photo} alt="photo" />
+                                                <div className="image-box">
+                                                    <img className="img-fluid" src={item.photo} alt="photo" />
+                                                </div>
                                                 <div className="lower-content">
                                                     <div className="why-us-icon"><i className={item.icon}></i></div>
                                                     <h3>{item.title}</h3>
