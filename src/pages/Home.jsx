@@ -1,4 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
+import { BiSearch } from "react-icons/bi";
 
 const Home = () => {
     return (
@@ -23,13 +24,12 @@ const Home = () => {
                                     </div>
                                     <div className="col-lg-6 col-md-6 col-sm-12 column">
                                         <div className="form-group input-date">
-                                            <i className="far fa-angle-down"></i>
                                             <input type="date" name="date" placeholder="When?" className="when" />
                                         </div>
                                     </div>
                                     <div className="col-lg-6 col-md-6 col-sm-12 column">
                                         <div className="form-group message-btn">
-                                            <button type="submit" className="theme-btn"><i className="far fa-search"></i>Find Now</button>
+                                            <button type="submit" className="theme-btn"> <BiSearch /> Find Now</button>
                                         </div>
                                     </div>
                                 </div>
