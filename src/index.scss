@@ -2,6 +2,9 @@ $ColorBlack: #000;
 $ColorThemePrimary:#061a3a;
 $ColorThemeSecondary:#ff7c5b;
 $ColorBg1:#f2f5f5;
+$ColorText1:#3a4760;
+$ColorText2:#001337;
+
 
 body {
     font-family: 'Work Sans',
@@ -175,5 +178,23 @@ img.header-logo {
         &:hover {
             background: #061a3a;
         }
+    }
+}
+
+.hero-content {
+    h1 {
+        font-size: 70px;
+        font-weight: 800;
+        margin-bottom: 34px;
+        color: $ColorText2;
+        line-height: 70px;
+    }
+
+    p {
+        font-size: 24px;
+        line-height: 30px;
+        color: $ColorText1;
+        font-weight: 500;
+        margin-bottom: 44px;
     }
 }

@@ -1,44 +1,52 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { BiSearch } from "react-icons/bi";
+import heroImage from '../assets/images/hero.png'
 
 const Home = () => {
     return (
-        <Container className="default-margin-top">
-            <Row>
-                <Col lg={6} sm={12} md={12}>
-                    <div className="hero-content">
-                        <h1>Where would you like to go?</h1>
-                        <p>Embark on your next extraordinary adventure.</p>
-                        <div className="form-inner">
-                            <form className="booking-form">
-                                <div className="row">
-                                    <div className="col-lg-6 col-md-6 col-sm-12 column">
-                                        <div className="form-group">
-                                            <input type="text" name="origin" placeholder="Origin" required="" />
+        <div className="default-margin-top">
+            <div className="hero-area-wrap py-5">
+                <Container >
+                    <Row className="align-items-center">
+                        <Col lg={6} sm={12} md={12}>
+                            <div className="hero-content">
+                                <h1>Where would you like to go?</h1>
+                                <p>Embark on your next extraordinary adventure.</p>
+                                <div className="form-inner">
+                                    <form className="booking-form">
+                                        <div className="row">
+                                            <div className="col-lg-6 col-md-6 col-sm-12 column">
+                                                <div className="form-group">
+                                                    <input type="text" name="origin" placeholder="Origin" required="" />
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6 col-md-6 col-sm-12 column">
+                                                <div className="form-group">
+                                                    <input type="text" name="destination" placeholder="Destination" required="" />
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6 col-md-6 col-sm-12 column">
+                                                <div className="form-group input-date">
+                                                    <input type="date" name="date" placeholder="When?" className="when" />
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6 col-md-6 col-sm-12 column">
+                                                <div className="form-group message-btn">
+                                                    <button type="submit" className="theme-btn"> <BiSearch /> Find Now</button>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="col-lg-6 col-md-6 col-sm-12 column">
-                                        <div className="form-group">
-                                            <input type="text" name="destination" placeholder="Destination" required="" />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 col-md-6 col-sm-12 column">
-                                        <div className="form-group input-date">
-                                            <input type="date" name="date" placeholder="When?" className="when" />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 col-md-6 col-sm-12 column">
-                                        <div className="form-group message-btn">
-                                            <button type="submit" className="theme-btn"> <BiSearch /> Find Now</button>
-                                        </div>
-                                    </div>
+                                    </form>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-                </Col>
-            </Row>
-        </Container>
+                            </div>
+                        </Col>
+                        <Col lg={6} sm={12} md={12}>
+                            <img className="img-fluid" src={heroImage} alt="Hero area images" />
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+        </div>
     );
 };
 
