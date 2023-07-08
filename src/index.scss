@@ -1,6 +1,7 @@
 $ColorBlack: #000;
 $ColorThemePrimary:#061a3a;
 $ColorThemeSecondary:#ff7c5b;
+$ColorBg1:#f2f5f5;
 
 body {
     font-family: 'Work Sans',
@@ -44,4 +45,87 @@ img.header-logo {
 
 .default-margin-top {
     margin-top: 75px;
+}
+
+// Footer CSS 
+
+.footer-wrap {
+    background-color: $ColorBg1;
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+
+    .footer-widget {
+        .footer-title {
+            color: $ColorThemePrimary;
+            font-weight: 600;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: $ColorThemePrimary;
+            line-height: 30px;
+            font-weight: 500;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style: none;
+
+                a {
+                    line-height: 30px;
+                    font-weight: 500;
+                    opacity: 1;
+                    color: $ColorThemePrimary;
+                    z-index: 1;
+                    -webkit-transition: all 500ms ease;
+                    -moz-transition: all 500ms ease;
+                    -ms-transition: all 500ms ease;
+                    -o-transition: all 500ms ease;
+                    transition: all 500ms ease;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $ColorThemeSecondary;
+                    }
+                }
+
+                p {
+                    color: $ColorThemePrimary;
+                    line-height: 30px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .footer-copyright {
+        p {
+            color: $ColorThemePrimary;
+            line-height: 30px;
+            font-weight: 500;
+        }
+
+        a {
+            line-height: 30px;
+            font-weight: 500;
+            opacity: 1;
+            color: $ColorThemePrimary;
+            z-index: 1;
+            -webkit-transition: all 500ms ease;
+            -moz-transition: all 500ms ease;
+            -ms-transition: all 500ms ease;
+            -o-transition: all 500ms ease;
+            transition: all 500ms ease;
+            text-decoration: none;
+
+            &:hover {
+                color: $ColorThemeSecondary;
+            }
+        }
+    }
 }
