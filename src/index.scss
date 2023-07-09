@@ -12,6 +12,13 @@ body {
         sans-serif !important;
 }
 
+ul,
+li {
+    list-style: none;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
 /* Header  */
 
 img.header-logo {
@@ -830,4 +837,37 @@ img.header-logo {
         color: $ColorThemeSecondary;
         top: 13px;
     }
+}
+
+// 02 Categoy Widget
+.material-checkbox {
+    input {
+        position: relative;
+        margin-right: 10px;
+        top: 2px;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        border: 1px solid #ededed !important;
+        cursor: pointer;
+        border-radius: 3px;
+
+        &:focus {
+            background-color: red !important;
+        }
+    }
+}
+
+.custom-check-box {
+    margin-bottom: 10px !important;
+}
+
+.description {
+    position: relative;
+    display: inline-block;
+    padding: 0px;
+    font-size: 15px;
+    color: #808080;
+    cursor: pointer;
+    font-weight: 500;
 }
