@@ -1,11 +1,12 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Link, useLoaderData } from "react-router-dom";
+import { Category, Durations, ReviewScore, Search, Sponsor } from "../components/widget";
 
 
 const Tour = () => {
     const tours = useLoaderData()
-    console.log(tours);
+    // console.log(tours);
     return (
         <div className="default-margin-top">
             <Breadcrumbs title='Our Tours List' description='Discover your next great adventure'></Breadcrumbs>
@@ -40,8 +41,12 @@ const Tour = () => {
                         </Row>
                     </Col>
                     <Col lg={4} md={12} sm={12}>
-                        <div className="bg-danger">
-                            Widget Card
+                        <div className="ms-3">
+                            <Search></Search>
+                            <Category></Category>
+                            <Durations></Durations>
+                            <ReviewScore></ReviewScore>
+                            <Sponsor></Sponsor>
                         </div>
                     </Col>
                 </Row>
