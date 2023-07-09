@@ -154,6 +154,19 @@ const Home = () => {
                     </Row>
                 </Container>
             </div>
+            <div className="offers-wrap py-5">
+                <Container>
+                    <div className="section-title pb-5">
+                        <p>DEALS & OFFERS</p>
+                        <h2>Last-Minute Exclusive Deals</h2>
+                    </div>
+                    <Row>
+                        <Col>
+                            <h3>Hello</h3>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         </div>
     );
 };
