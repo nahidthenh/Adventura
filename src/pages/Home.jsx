@@ -1,8 +1,10 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { BiSearch } from "react-icons/bi";
 import heroImage from '../assets/images/hero.png'
+import aboutUs from '../assets/images/about.png'
 import axios from 'axios';
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const [whyus, setWhyus] = useState([]);
@@ -63,7 +65,7 @@ const Home = () => {
                     </Row>
                 </Container>
             </div>
-            <div className="why-us pb-5">
+            <div className="why-us py-5">
                 <Container>
                     <div className="section-title text-center pb-5">
                         <p>Adventura Specials</p>
@@ -89,6 +91,27 @@ const Home = () => {
                                     ))}
                                 </Row>
                             )}
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+            <div className="about-us py-5">
+                <Container>
+                    <Row className="align-items-center">
+                        <Col lg={6} md={12} sm={12}>
+                            <div className="me-5">
+                                <p>About Adventura</p>
+                                <h2>Premier Worlds Best Travel Agency Company Since 2022</h2>
+                                <div className="des">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam ut minima sequi, placeat temporibus quo velit rem nisi voluptatum atque quam laudantium blanditiis eius maiores corrupti assumenda vero reprehenderit molestias.</p>
+                                </div>
+                                <Link to='destination'>Find Now.</Link>
+                            </div>
+                        </Col>
+                        <Col lg={6} md={12} sm={12}>
+                            <div className="about-image ms-5">
+                                <img src={aboutUs} alt="" />
+                            </div>
                         </Col>
                     </Row>
                 </Container>
