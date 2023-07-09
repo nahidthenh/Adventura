@@ -214,6 +214,15 @@ const Home = () => {
                     </Row>
                 </Container>
             </div>
+            <div className="py-5 our-fun-fact">
+                <Container>
+                    <Row>
+                        <Col>
+                            <h3>Fun Fact</h3>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
             <div className="our-tour-wrap py-5">
                 <Container>
                     <div className="section-title pb-5 text-center">

@@ -528,9 +528,9 @@ img.header-logo {
 
 // Tour Section 
 
-// .our-tour-wrap {
-//     background-color: $ColorBg2;
-// }
+.our-fun-fact {
+    background-color: $ColorBg2;
+}
 
 // Destination page 
 .destination-single-item {
@@ -586,6 +586,11 @@ img.header-logo {
 }
 
 // Tour Page 
+.sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 105px;
+}
 
 .tour-single-item {
     position: relative;

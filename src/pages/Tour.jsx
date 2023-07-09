@@ -41,7 +41,7 @@ const Tour = () => {
                         </Row>
                     </Col>
                     <Col lg={4} md={12} sm={12}>
-                        <div className="ms-3">
+                        <div className="ms-3 sidebar-sticky">
                             <Search></Search>
                             <Category></Category>
                             <Durations></Durations>
