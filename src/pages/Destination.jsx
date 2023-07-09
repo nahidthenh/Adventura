@@ -10,7 +10,7 @@ const Destination = () => {
 
     return (
         <div className="default-margin-top">
-            <Breadcrumbs></Breadcrumbs>
+            <Breadcrumbs title='Destinations' description='Discover your next great adventure'></Breadcrumbs>
             <Container className="default-margin-top mb-5">
                 <Row>
                     {
