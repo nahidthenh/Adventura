@@ -177,54 +177,16 @@ const Home = () => {
                                     modules={[Autoplay]}
                                     className="mySwiper"
                                 >
-                                    <SwiperSlide>
-                                        {
-                                            destinationData.slice(0, 1).map(data => (
-                                                <div className="destination-single-item" key={data.id}>
-                                                    <div className="destination-cover">
-                                                        <img src={data.image} alt="" />
-                                                    </div>
-                                                    <Link to={`destination-details/${data.id}`}><h3>{data.place}</h3></Link>
+                                    {
+                                        destinationData.map(data => (
+                                            <SwiperSlide className="destination-single-item" key={data.id}>
+                                                <div className="destination-cover">
+                                                    <img src={data.image} alt="" />
                                                 </div>
-                                            ))
-                                        }
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        {
-                                            destinationData.slice(1, 2).map(data => (
-                                                <div className="destination-single-item" key={data.id}>
-                                                    <div className="destination-cover">
-                                                        <img src={data.image} alt="" />
-                                                    </div>
-                                                    <Link to={`destination-details/${data.id}`}><h3>{data.place}</h3></Link>
-                                                </div>
-                                            ))
-                                        }
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        {
-                                            destinationData.slice(2, 3).map(data => (
-                                                <div className="destination-single-item" key={data.id}>
-                                                    <div className="destination-cover">
-                                                        <img src={data.image} alt="" />
-                                                    </div>
-                                                    <Link to={`destination-details/${data.id}`}><h3>{data.place}</h3></Link>
-                                                </div>
-                                            ))
-                                        }
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        {
-                                            destinationData.slice(3, 4).map(data => (
-                                                <div className="destination-single-item" key={data.id}>
-                                                    <div className="destination-cover">
-                                                        <img src={data.image} alt="" />
-                                                    </div>
-                                                    <Link to={`destination-details/${data.id}`}><h3>{data.place}</h3></Link>
-                                                </div>
-                                            ))
-                                        }
-                                    </SwiperSlide>
+                                                <Link to={`destination-details/${data.id}`}><h3>{data.place}</h3></Link>
+                                            </SwiperSlide>
+                                        ))
+                                    }
                                 </Swiper>
                             </>
                         </Col>
