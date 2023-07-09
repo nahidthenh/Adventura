@@ -21,15 +21,15 @@ const Tour = () => {
                                                 <img src={data.image} alt="Tour Images" />
                                             </div>
                                             <div className="tour-single-content">
-                                                <div className="rating"><span><i className="ri-star-line"></i>{data.rating} Superb</span></div>
+                                                <div className="rating"><span><i className="ri-star-fill"></i>{data.rating} Superb</span></div>
                                                 <h3><Link to={`tour-details/${data.id}`}>{data.place}</Link></h3>
-                                                <h4>${data.price}<span> / Per person</span></h4>
+                                                <h4>{data.price} <span> / Per person</span></h4>
                                                 <ul className="info">
                                                     <li><i className="ri-time-line"></i>{data.duration}</li>
                                                     <li><i className="ri-map-line"></i>{data.location}</li>
                                                 </ul>
                                                 <p>{data.shortDescription}</p>
-                                                <div className="btn-box">
+                                                <div className="tour-btn-box">
                                                     <Link to={`tour-details/${data.id}`}>See Details</Link>
                                                 </div>
                                             </div>
