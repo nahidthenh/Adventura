@@ -11,12 +11,12 @@ const Destination = () => {
     return (
         <div className="default-margin-top">
             <Breadcrumbs></Breadcrumbs>
-            <Container>
+            <Container className="default-margin-top mb-5">
                 <Row>
                     {
                         destinations.map(data => (
                             <Col lg={4} md={6} sm={12} key={data.id}>
-                                <div className="destination-single-item">
+                                <div className="destination-single-item ">
                                     <div className="destination-cover">
                                         <img src={data.image} alt="" />
                                     </div>
