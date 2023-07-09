@@ -5,7 +5,6 @@ import aboutUs from '../assets/images/about.png'
 import axios from 'axios';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
 const Home = () => {
     const [whyus, setWhyus] = useState([]);
 
@@ -17,6 +16,23 @@ const Home = () => {
         try {
             const response = await axios.get('http://localhost:5000/whyus');
             setWhyus(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    // for Destination data
+
+    const [destinationData, setDestinationData] = useState([]);
+
+    useEffect(() => {
+        fetchDestinationDataData();
+    }, []);
+
+    async function fetchDestinationDataData() {
+        try {
+            const response = await axios.get('http://localhost:5000/destinations');
+            setDestinationData(response.data);
         } catch (error) {
             console.error(error);
         }
@@ -113,6 +129,28 @@ const Home = () => {
                                 <img src={aboutUs} alt="" />
                             </div>
                         </Col>
+                    </Row>
+                </Container>
+            </div>
+            <div className="our-city py-5">
+                <Container>
+                    <div className="section-title text-center pb-5">
+                        <p>CHOOSE YOUR PLACE</p>
+                        <h2>Popular Destinations</h2>
+                    </div>
+                    <Row>
+                        {
+                            destinationData.slice(0, 6).map(data => (
+                                <Col lg={4} md={6} sm={12} key={data.id}>
+                                    <div className="destination-single-item">
+                                        <div className="destination-cover">
+                                            <img src={data.image} alt="" />
+                                        </div>
+                                        <Link to={`destination-details/${data.id}`}><h3>{data.place}</h3></Link>
+                                    </div>
+                                </Col>
+                            ))
+                        }
                     </Row>
                 </Container>
             </div>
