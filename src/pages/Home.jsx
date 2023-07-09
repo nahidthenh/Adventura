@@ -179,11 +179,15 @@ const Home = () => {
                                 >
                                     {
                                         destinationData.map(data => (
-                                            <SwiperSlide className="destination-single-item" key={data.id}>
-                                                <div className="destination-cover">
-                                                    <img src={data.image} alt="" />
+                                            <SwiperSlide className="offers-single-item" key={data.id}>
+                                                <div className="offers-item-img">
+                                                    <img src={data.offerImg} alt="OfferImage" />
                                                 </div>
-                                                <Link to={`destination-details/${data.id}`}><h3>{data.place}</h3></Link>
+                                                <div className="content-box">
+                                                    <span>Get {data.discount}% Off</span>
+                                                    <h3><Link to={`destination-details/${data.id}`}>{data.place}</Link></h3>
+                                                    <h4>${data.price}</h4>
+                                                </div>
                                             </SwiperSlide>
                                         ))
                                     }
