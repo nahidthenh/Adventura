@@ -5,6 +5,10 @@ import aboutUs from '../assets/images/about.png'
 import axios from 'axios';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+// Import Swiper React components Start
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+// Import Swiper React components End
 const Home = () => {
     const [whyus, setWhyus] = useState([]);
 
@@ -161,8 +165,68 @@ const Home = () => {
                         <h2>Last-Minute Exclusive Deals</h2>
                     </div>
                     <Row>
-                        <Col>
-                            <h3>Hello</h3>
+                        <Col md={12} lg={12} sm={12}>
+                            <>
+                                <Swiper
+                                    slidesPerView={3}
+                                    spaceBetween={30}
+                                    autoplay={{
+                                        delay: 2500,
+                                        disableOnInteraction: false,
+                                    }}
+                                    modules={[Autoplay]}
+                                    className="mySwiper"
+                                >
+                                    <SwiperSlide>
+                                        {
+                                            destinationData.slice(0, 1).map(data => (
+                                                <div className="destination-single-item" key={data.id}>
+                                                    <div className="destination-cover">
+                                                        <img src={data.image} alt="" />
+                                                    </div>
+                                                    <Link to={`destination-details/${data.id}`}><h3>{data.place}</h3></Link>
+                                                </div>
+                                            ))
+                                        }
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        {
+                                            destinationData.slice(1, 2).map(data => (
+                                                <div className="destination-single-item" key={data.id}>
+                                                    <div className="destination-cover">
+                                                        <img src={data.image} alt="" />
+                                                    </div>
+                                                    <Link to={`destination-details/${data.id}`}><h3>{data.place}</h3></Link>
+                                                </div>
+                                            ))
+                                        }
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        {
+                                            destinationData.slice(2, 3).map(data => (
+                                                <div className="destination-single-item" key={data.id}>
+                                                    <div className="destination-cover">
+                                                        <img src={data.image} alt="" />
+                                                    </div>
+                                                    <Link to={`destination-details/${data.id}`}><h3>{data.place}</h3></Link>
+                                                </div>
+                                            ))
+                                        }
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        {
+                                            destinationData.slice(3, 4).map(data => (
+                                                <div className="destination-single-item" key={data.id}>
+                                                    <div className="destination-cover">
+                                                        <img src={data.image} alt="" />
+                                                    </div>
+                                                    <Link to={`destination-details/${data.id}`}><h3>{data.place}</h3></Link>
+                                                </div>
+                                            ))
+                                        }
+                                    </SwiperSlide>
+                                </Swiper>
+                            </>
                         </Col>
                     </Row>
                 </Container>
