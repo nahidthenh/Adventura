@@ -1,9 +1,10 @@
+import Breadcrumbs from "../components/Breadcrumbs";
 
 
 const Tour = () => {
     return (
-        <div>
-            Tour
+        <div className="default-margin-top">
+            <Breadcrumbs title='Our Tours List' description='Discover your next great adventure'></Breadcrumbs>
         </div>
     );
 };
