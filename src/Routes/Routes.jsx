@@ -6,7 +6,8 @@ import {
     Home,
     Destination,
     Contact,
-    Profile
+    Profile,
+    Tour
 } from '../pages/index'
 export const router = createBrowserRouter([
     {
@@ -23,6 +24,13 @@ export const router = createBrowserRouter([
                     return fetch('http://localhost:5000/destinations')
                 }),
                 element: <Destination></Destination>
+            },
+            {
+                path: '/tour',
+                // loader: (() => {
+                //     return fetch('http://localhost:5000/destinations')
+                // }),
+                element: <Tour></Tour>
             },
             {
                 path: '/blog',

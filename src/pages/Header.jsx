@@ -16,6 +16,7 @@ const Header = () => {
                         <Nav>
                             <NavLink as={Link} to='/'>Home</NavLink>
                             <NavLink as={Link} to='/destination'>Destination</NavLink>
+                            <NavLink as={Link} to='/tour'>Tour</NavLink>
                             <NavLink as={Link} to='/blog'>Blog</NavLink>
                             <NavLink as={Link} to='/contact'>Contact</NavLink>
                             <NavLink as={Link} to='/profile' >Md. Nahid Hasan</NavLink>
