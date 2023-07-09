@@ -42,6 +42,23 @@ const Home = () => {
         }
     }
 
+    // for Tour data
+
+    const [tourData, setTourData] = useState([]);
+
+    useEffect(() => {
+        fetchTourDataData();
+    }, []);
+
+    async function fetchTourDataData() {
+        try {
+            const response = await axios.get('http://localhost:5000/tour');
+            setTourData(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
     return (
         <div className="default-margin-top">
             <div className="hero-area-wrap py-5">
@@ -194,6 +211,40 @@ const Home = () => {
                                 </Swiper>
                             </>
                         </Col>
+                    </Row>
+                </Container>
+            </div>
+            <div className="our-tour-wrap py-5">
+                <Container>
+                    <div className="section-title pb-5 text-center">
+                        <p>Upscale & Lovely</p>
+                        <h2>Preferred Outdoor Experiences</h2>
+                    </div>
+                    <Row>
+                        {
+                            tourData.slice(3, 6).map(data => (
+                                <Col lg={4} md={6} sm={12} key={data.id}>
+                                    <div className="tour-single-item">
+                                        <div className="tour-image">
+                                            <img src={data.image} alt="Tour Images" />
+                                        </div>
+                                        <div className="tour-single-content">
+                                            <div className="rating"><span><i className="ri-star-fill"></i>{data.rating} Superb</span></div>
+                                            <h3><Link to={`tour-details/${data.id}`}>{data.place}</Link></h3>
+                                            <h4>{data.price} <span> / Per person</span></h4>
+                                            <ul className="info">
+                                                <li><i className="ri-time-line"></i>{data.duration}</li>
+                                                <li><i className="ri-map-line"></i>{data.location}</li>
+                                            </ul>
+                                            <p>{data.shortDescription}</p>
+                                            <div className="tour-btn-box">
+                                                <Link to={`tour-details/${data.id}`}>See Details</Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Col>
+                            ))
+                        }
                     </Row>
                 </Container>
             </div>
