@@ -35,10 +35,26 @@ const Contact = () => {
                         </div>
                     </Col>
                 </Row>
-                <Row className='pb-5'>
-                    <Col lg={6} className='mx-auto'>
-                        <div className="contact-form-wrap p-3">
-
+                <Row className='py-5'>
+                    <Col lg={5}>
+                        <small className='text-danger'>Google Map WIll Be here 😁✌️</small>
+                    </Col>
+                    <Col lg={7}>
+                        <div className="contact-form-wrap p-4 rounded-3">
+                            <form>
+                                <Row>
+                                    <Col><input className="d-block w-100 mb-4 auth-input border-0" type="text" name="name" placeholder="Your Name " required /></Col>
+                                    <Col> <input className="d-block w-100 mb-4 auth-input border-0" type="email" name="photo" placeholder="Your Email " required /></Col>
+                                </Row>
+                                <Row>
+                                    <Col><input className="d-block w-100 mb-4 auth-input border-0" type="email" name="email" placeholder="Phone Number " required /></Col>
+                                    <Col><input className="d-block w-100 mb-4 auth-input border-0" type="text" name="password" placeholder="Subject " required /></Col>
+                                </Row>
+                                <Row>
+                                    <Col><textarea name="" id="" cols="30" rows="10" className='form-control border-0 mb-4' placeholder='Message'></textarea></Col>
+                                </Row>
+                                <button className="mb-4 w-100" type="submit">Send Message</button>
+                            </form>
                         </div>
                     </Col>
                 </Row>
