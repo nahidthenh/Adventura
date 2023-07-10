@@ -7,7 +7,9 @@ import {
     Destination,
     Contact,
     Profile,
-    Tour
+    Tour,
+    Signin,
+    Signup
 } from '../pages/index'
 export const router = createBrowserRouter([
     {
@@ -46,6 +48,14 @@ export const router = createBrowserRouter([
             {
                 path: '/profile',
                 element: <Profile></Profile>
+            },
+            {
+                path: '/signin',
+                element: <Signin></Signin>
+            },
+            {
+                path: '/signup',
+                element: <Signup></Signup>
             }
         ]
     },
