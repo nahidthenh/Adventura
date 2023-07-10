@@ -19,7 +19,8 @@ const Header = () => {
                             <NavLink as={Link} to='/tour'>Tour</NavLink>
                             <NavLink as={Link} to='/blog'>Blog</NavLink>
                             <NavLink as={Link} to='/contact'>Contact</NavLink>
-                            <NavLink as={Link} to='/profile' >Md. Nahid Hasan</NavLink>
+                            <NavLink className='header-signin-btn' as={Link} to='/signin' >Join</NavLink>
+                            {/* <NavLink as={Link} to='/profile' >Md. Nahid Hasan</NavLink> */}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
