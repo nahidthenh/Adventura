@@ -526,10 +526,24 @@ img.header-logo {
 
 }
 
-// Tour Section 
+// Fun Fact Section 
 
 .our-fun-fact {
     background-color: $ColorBg2;
+}
+
+.fan-fact-box {
+    text-align: center;
+
+    h3 {
+        font-weight: 700;
+        color: $ColorText2;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 // Destination page 

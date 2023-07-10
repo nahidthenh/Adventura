@@ -217,8 +217,29 @@ const Home = () => {
             <div className="py-5 our-fun-fact">
                 <Container>
                     <Row>
-                        <Col>
-                            <h3>Fun Fact</h3>
+                        <Col lg={3} md={6} sm={12}>
+                            <div className="fan-fact-box">
+                                <h3>4,958</h3>
+                                <p>Destinations</p>
+                            </div>
+                        </Col>
+                        <Col lg={3} md={6} sm={12}>
+                            <div className="fan-fact-box">
+                                <h3>2,869</h3>
+                                <p>Total Properties</p>
+                            </div>
+                        </Col>
+                        <Col lg={3} md={6} sm={12}>
+                            <div className="fan-fact-box">
+                                <h3>1M</h3>
+                                <p>Happy customers</p>
+                            </div>
+                        </Col>
+                        <Col lg={3} md={6} sm={12}>
+                            <div className="fan-fact-box">
+                                <h3>574,974</h3>
+                                <p>Our Volunteers</p>
+                            </div>
                         </Col>
                     </Row>
                 </Container>
