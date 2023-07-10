@@ -12,7 +12,7 @@ const Footer = () => {
                             <h3>Not a Member Yet?</h3>
                             <p>Join us! Our members can access savings of up to 50% and earn Trip Coins while booking.</p>
                         </Col>
-                        <Col lg={4}>
+                        <Col lg={4} className="text-end">
                             <div className="cta-btn-group">
                                 <Link className="active" to='signin'>Sign In</Link>
                                 <Link to='signup'>Sign Up</Link>

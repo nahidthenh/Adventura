@@ -297,7 +297,7 @@ const Home = () => {
             <div className="testimonial-wrap py-5">
                 <Container>
                     <Row className="align-items-center">
-                        <div className="section-title pb-5 text-center">
+                        <div className="section-title pb-3 text-center">
                             <p className="text-white">REVIEW & TESTIMONIALS</p>
                             <h2 style={{ fontSize: '35px' }}>Top Reviews for Your Motivition.</h2>
                         </div>
