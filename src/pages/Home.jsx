@@ -75,6 +75,24 @@ const Home = () => {
             console.error(error);
         }
     }
+
+    // fot Blog Data
+
+    const [blogData, setBlogData] = useState([]);
+
+    useEffect(() => {
+        fetchBlogData();
+    }, []);
+
+    async function fetchBlogData() {
+        try {
+            const response = await axios.get('http://localhost:5000/blog');
+            setBlogData(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
     return (
         <div className="default-margin-top">
             <div className="hero-area-wrap py-5">
@@ -344,6 +362,33 @@ const Home = () => {
                                 </Swiper>
                             </>
                         </Col>
+                    </Row>
+                </Container>
+            </div>
+            <div className="our-blog py-5">
+                <Container>
+                    <div className="section-title pb-5">
+                        <p>NEWS & ARTICLES</p>
+                        <h2>Stay Update with Tour Tips.</h2>
+                    </div>
+                    <Row>
+                        {
+                            blogData.slice(0, 3).map(data => (
+                                <Col lg={4} md={6} sm={12} key={data.id}>
+                                    <div className="blog-item">
+                                        <div className="blog-img">
+                                            <img src={data.image} alt="Blog Images" />
+                                        </div>
+                                        <div className="blog-content">
+                                            <small>{data.postDate}</small>
+                                            <h3><Link to={`/blog-details/${data.id}`}>{data.title}</Link></h3>
+                                            <p>{data.shortDescription}</p>
+                                            <Link className="blog-readmore-btn" to={`/blog-details/${data.id}`}>Read More</Link>
+                                        </div>
+                                    </div>
+                                </Col>
+                            ))
+                        }
                     </Row>
                 </Container>
             </div>
