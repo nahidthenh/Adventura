@@ -53,7 +53,7 @@ const Contact = () => {
                                 <Row>
                                     <Col><textarea name="" id="" cols="30" rows="10" className='form-control border-0 mb-4' placeholder='Message'></textarea></Col>
                                 </Row>
-                                <button className="mb-4 w-100" type="submit">Send Message</button>
+                                <button disabled className="mb-4 w-100" type="submit">Send Message</button>
                             </form>
                         </div>
                     </Col>
