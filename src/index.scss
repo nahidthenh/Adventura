@@ -1207,3 +1207,41 @@ label.form-check-label {
         color: #818181;
     }
 }
+
+// Error Page / 404 Page 
+
+.error-wrap {
+    text-align: center;
+    padding: 130px 0px;
+
+    h1 {
+        font-size: 120px;
+        font-weight: 800;
+        color: #ff7c5b;
+    }
+
+    h2 {
+        text-transform: capitalize;
+        margin-bottom: 50px;
+        font-weight: 600;
+        color: $ColorText2;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 17px;
+        line-height: 25px;
+        color: #fff !important;
+        text-align: center;
+        padding: 17.5px 41.5px;
+        border-radius: 4px;
+        z-index: 1;
+        box-shadow: 0px 15px 25px 0px rgba(255, 124, 91, 0.3);
+        transition: all 500ms ease;
+        background: $ColorThemeSecondary;
+
+        &:hover {
+            background-color: $ColorThemePrimary;
+        }
+    }
+}
