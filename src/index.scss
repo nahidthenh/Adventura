@@ -546,6 +546,47 @@ img.header-logo {
     }
 }
 
+// Testimonial Section 
+
+.testimonial-wrap {
+    background: #13357b;
+    color: #fff;
+}
+
+.testimonials-single-item {
+    background-color: #fff;
+    box-shadow: 0px 10px 35px 0px #0510361A;
+    padding: 30px;
+    border-radius: 10px;
+
+    h4 {
+        color: $ColorText2;
+        font-weight: 600;
+        font-size: 22px;
+    }
+
+    p {
+        color: $ColorText1;
+        font-size: 15px;
+        line-height: 1.8 !important;
+        font-weight: 600;
+
+    }
+
+    h6 {
+        color: $ColorText2;
+        font-weight: 600;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    span {
+        color: $ColorText1;
+        font-weight: 500;
+    }
+}
+
+
 // Destination page 
 .destination-single-item {
     position: relative;

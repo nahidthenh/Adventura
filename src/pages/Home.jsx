@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // Import Swiper React components Start
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, EffectCards } from 'swiper/modules';
 // Import Swiper React components End
 const Home = () => {
     const [whyus, setWhyus] = useState([]);
@@ -54,6 +54,23 @@ const Home = () => {
         try {
             const response = await axios.get('http://localhost:5000/tour');
             setTourData(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    // fot Testimonials Data
+
+    const [testimonialsData, setTestimonialsData] = useState([]);
+
+    useEffect(() => {
+        fetchTestimonialsData();
+    }, []);
+
+    async function fetchTestimonialsData() {
+        try {
+            const response = await axios.get('http://localhost:5000/testimonials');
+            setTestimonialsData(response.data);
         } catch (error) {
             console.error(error);
         }
@@ -275,6 +292,45 @@ const Home = () => {
                                 </Col>
                             ))
                         }
+                    </Row>
+                </Container>
+            </div>
+            <div className="testimonial-wrap py-5">
+                <Container>
+                    <Row>
+                        <Col xl={5} lg={6}>
+                            <h3>Testimonials Card</h3>
+                            {testimonialsData.length}
+                        </Col>
+                        <Col xl={{ span: 4, offset: 2 }} lg={{ span: 5, offset: 1 }} md={10}>
+                            <>
+                                <Swiper
+                                    effect={'cards'}
+                                    grabCursor={true}
+                                    modules={[EffectCards]}
+                                    className="mySwiper"
+                                >
+                                    {
+                                        testimonialsData.map(data => (
+                                            <SwiperSlide className="testimonials-single-item" key={data.id}>
+                                                <h4>{data.title}</h4>
+                                                <p>{data.description}</p>
+                                                <hr />
+                                                <div className="d-flex align-items-center">
+                                                    <div>
+                                                        <img className="rounded-circle" src={data.userPhoto} alt="" />
+                                                    </div>
+                                                    <div className="ms-3">
+                                                        <h6>{data.username}</h6>
+                                                        <span>{data.job}</span>
+                                                    </div>
+                                                </div>
+                                            </SwiperSlide>
+                                        ))
+                                    }
+                                </Swiper>
+                            </>
+                        </Col>
                     </Row>
                 </Container>
             </div>
