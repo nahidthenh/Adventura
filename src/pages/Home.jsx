@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // Import Swiper React components Start
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectCards } from 'swiper/modules';
+import { Autoplay, EffectCreative } from 'swiper/modules';
 // Import Swiper React components End
 const Home = () => {
     const [whyus, setWhyus] = useState([]);
@@ -75,7 +75,6 @@ const Home = () => {
             console.error(error);
         }
     }
-
     return (
         <div className="default-margin-top">
             <div className="hero-area-wrap py-5">
@@ -297,17 +296,31 @@ const Home = () => {
             </div>
             <div className="testimonial-wrap py-5">
                 <Container>
-                    <Row>
-                        <Col xl={5} lg={6}>
-                            <h3>Testimonials Card</h3>
-                            {testimonialsData.length}
-                        </Col>
-                        <Col xl={{ span: 4, offset: 2 }} lg={{ span: 5, offset: 1 }} md={10}>
+                    <Row className="align-items-center">
+                        <div className="section-title pb-5 text-center">
+                            <p className="text-white">REVIEW & TESTIMONIALS</p>
+                            <h2 style={{ fontSize: '35px' }}>Top Reviews for Your Motivition.</h2>
+                        </div>
+                        <Col xl={6} className="mx-auto">
                             <>
                                 <Swiper
-                                    effect={'cards'}
-                                    grabCursor={true}
-                                    modules={[EffectCards]}
+                                    slidesPerView={1}
+                                    spaceBetween={30}
+                                    autoplay={{
+                                        delay: 2500,
+                                        disableOnInteraction: false,
+                                    }}
+                                    effect={'creative'}
+                                    creativeEffect={{
+                                        prev: {
+                                            shadow: true,
+                                            translate: [0, 0, -400],
+                                        },
+                                        next: {
+                                            translate: ['100%', 0, 0],
+                                        },
+                                    }}
+                                    modules={[Autoplay, EffectCreative]}
                                     className="mySwiper"
                                 >
                                     {
