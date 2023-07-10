@@ -2,8 +2,8 @@
 
 const Contact = () => {
     return (
-        <div>
-            Contact
+        <div className="default-margin-top">
+            <h1>Comming Soon...</h1>
         </div>
     );
 };
