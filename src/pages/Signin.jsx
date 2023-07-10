@@ -20,6 +20,14 @@ const Signin = () => {
                             <form className="auth-form">
                                 <input className="d-block w-100 mb-4 auth-input" type="email" name="email" placeholder="Enter Your Email " />
                                 <input className="d-block w-100 mb-4 auth-input" type="password" name="password" placeholder="Enter Your Password " />
+
+                                <div className="form-check mb-4">
+                                    <input className="form-check-input" type="checkbox" />
+                                    <label className="form-check-label">
+                                        I Aggery With <Link to='tos'>Tos</Link>
+                                    </label>
+                                </div>
+
                                 <button className="mb-4" type="submit">Submit</button>
                             </form>
                             <div className="other-text">Already have an account ? <Link to='/signup'>Register Now</Link></div>
