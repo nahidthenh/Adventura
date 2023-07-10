@@ -61,7 +61,6 @@ img.header-logo {
 // Footer CSS 
 
 .footer-wrap {
-    background-color: $ColorBg1;
     padding-top: 40px;
     padding-bottom: 20px;
 
@@ -947,4 +946,52 @@ img.header-logo {
 
 .star-fill {
     color: #ffab01 !important;
+}
+
+// Cta Page  
+.cta-wrap {
+    background-color: #ebfcea;
+
+    h3 {
+        font-weight: 600;
+        font-size: 32px;
+        color: $ColorText2;
+    }
+
+    p {
+        color: $ColorText1;
+        font-size: 15px;
+    }
+
+    .cta-btn-group {
+        a {
+            position: relative;
+            display: inline-block;
+            font-size: 15px;
+            line-height: 26px;
+            color: #061a3a;
+            font-weight: 500;
+            border: 1px solid #e4e8e9;
+            border-radius: 4px;
+            padding: 11px 45px;
+            text-align: center;
+            transition: 0.4s;
+            text-decoration: none;
+            margin-left: 20px;
+
+            &.active {
+                background: #061a3a;
+                border-color: #061a3a;
+                transition: 0.4s;
+                color: #fff;
+            }
+
+            &:hover {
+                background: #061a3a;
+                border-color: #061a3a;
+                transition: 0.4s;
+                color: #fff;
+            }
+        }
+    }
 }
