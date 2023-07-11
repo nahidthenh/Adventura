@@ -1376,6 +1376,8 @@ label.form-check-label {
 }
 
 // Tour Details Page 
+
+
 .tours-details-baner {
     background-image: url('../src/assets/images/banner.jpg');
     background-size: cover;
@@ -1436,5 +1438,21 @@ label.form-check-label {
                 color: #ffffff;
             }
         }
+    }
+}
+
+.tours-main-wrap {
+    p {
+        color: #808080;
+        font-weight: 400;
+        margin-bottom: 20px;
+        line-height: 27px;
+    }
+
+    .tours-plan li {
+        color: #808080;
+        font-weight: 600;
+        margin-bottom: 20px;
+        line-height: 35px;
     }
 }
