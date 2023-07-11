@@ -27,12 +27,12 @@ const TourDetails = () => {
                             <h3>Overview</h3>
                             <p>{overviewDescription}</p>
                             <ul className="details-list">
-                                <li><i className="ri-user-location-line"></i><span>Destination:</span>{location}</li>
-                                <li><i className="ri-visa-line"></i><span>Departure:</span>{departure}</li>
-                                <li><i className="ri-global-line"></i><span>Departure Time:</span>{departureTime}</li>
-                                <li><i className="ri-chat-smile-2-line"></i><span>Return Time:</span>{returnTime}</li>
-                                <li><i className="ri-money-dollar-circle-line"></i><span>Included:</span>{included}</li>
-                                <li><i className="ri-pin-distance-line"></i><span>Excluded:</span>{excluded}</li>
+                                <li><i className="ri-map-pin-line"></i><span>Destination:</span>{location}</li>
+                                <li><i className="ri-flight-land-line"></i><span>Departure:</span>{departure}</li>
+                                <li><i className="ri-plane-line"></i><span>Departure Time:</span>{departureTime}</li>
+                                <li><i className="ri-flight-takeoff-line"></i><span>Return Time:</span>{returnTime}</li>
+                                <li><i className="ri-check-double-line"></i><span>Included:</span>{included}</li>
+                                <li><i className="ri-close-line"></i><span>Excluded:</span>{excluded}</li>
                             </ul>
                             <div className="tours-plan mb-4">
                                 <h2>Tour Plan:</h2>
