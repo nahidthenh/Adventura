@@ -1365,11 +1365,76 @@ label.form-check-label {
     }
 }
 
-.photo-gallery-item{
+.photo-gallery-item {
     margin-top: 30px;
-     img {
-         width: 100%;
-         border-radius: 10px;
-         margin-bottom: 25px;
-     }
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 25px;
+    }
+}
+
+// Tour Details Page 
+.tours-details-baner {
+    background-image: url('../src/assets/images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 400px;
+
+    &:before {
+        background: #000;
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        opacity: .55;
+    }
+
+    .tours-banner-content {
+        position: absolute;
+        bottom: 40px;
+
+        .rating span {
+            position: relative;
+            display: block;
+            font-size: 20px;
+            font-weight: 500;
+            color: #ffffff;
+            padding-left: 23px;
+            margin-bottom: 11px;
+
+            i {
+                position: absolute;
+                left: 0px;
+                top: 2px;
+                font-size: 16px;
+                color: #ffab01;
+            }
+        }
+
+        h1 {
+            display: block;
+            font-size: 36px;
+            line-height: 45px;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 13px;
+        }
+
+        h3 {
+            display: block;
+            font-size: 22px;
+            line-height: 30px;
+            font-weight: 700;
+            color: #ff7c5b;
+
+            span {
+                font-size: 15px;
+                font-weight: 500;
+                color: #ffffff;
+            }
+        }
+    }
 }
