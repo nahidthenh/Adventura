@@ -5,7 +5,7 @@ const Download = () => {
         <div className="widget-wrap">
             <h3 className="widget-title">Download</h3>
             <div className="widget-body">
-                <small>Comming Soon.</small>
+                <small>No Download File Found.</small>
             </div>
         </div>
     );
