@@ -28,8 +28,22 @@ const DestinationDetails = () => {
                                     <li><i className="ri-pin-distance-line"></i><span>Distance:</span>{countryDetails.distance}</li>
                                 </ul>
                             </div>
-                            <h2>Photo Gallery:</h2>
-                            <p>{photoGallery.shortDescription}</p>
+                            <div className="photo-gallery-wrap">
+                                <h2>Photo Gallery:</h2>
+                                <p>{photoGallery.shortDescription}</p>
+
+                                <div className="photo-gallery-item">
+                                    <Row>
+                                        {
+                                            photoGallery.images.map(item => (
+                                                <Col md={4} key={item} >
+                                                    <img src={item} />
+                                                </Col>
+                                            ))
+                                        }
+                                    </Row>
+                                </div>
+                            </div>
                         </div>
                     </Col>
                     <Col lg={4} md={12} sm={12}>
