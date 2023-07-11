@@ -9,9 +9,10 @@ import {
     Profile,
     Tour,
     Signin,
-    Signup
+    Signup,
+    DestinationDetails,
+    TourDetails
 } from '../pages/index'
-import DestinationDetails from "../pages/DestinationDetails";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -39,6 +40,13 @@ export const router = createBrowserRouter([
                     return fetch('http://localhost:5000/tour')
                 }),
                 element: <Tour></Tour>
+            },
+            {
+                path: '/tour/:id',
+                loader: (({ params }) => {
+                    return fetch(`http://localhost:5000/tour/${params.id}`)
+                }),
+                element: <TourDetails></TourDetails>
             },
             {
                 path: '/blog',

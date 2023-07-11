@@ -236,7 +236,7 @@ const Home = () => {
                                                 </div>
                                                 <div className="content-box">
                                                     <span>Get {data.discount}% Off</span>
-                                                    <h3><Link to={`destination-details/${data.id}`}>{data.place}</Link></h3>
+                                                    <h3><Link to={`destinations/${data.id}`}>{data.place}</Link></h3>
                                                     <h4>${data.price}</h4>
                                                 </div>
                                             </SwiperSlide>
@@ -294,7 +294,7 @@ const Home = () => {
                                         </div>
                                         <div className="tour-single-content">
                                             <div className="rating"><span><i className="ri-star-fill"></i>{data.rating} Superb</span></div>
-                                            <h3><Link to={`tour-details/${data.id}`}>{data.place}</Link></h3>
+                                            <h3><Link to={`/tour/${data.id}`}>{data.place}</Link></h3>
                                             <h4>{data.price} <span> / Per person</span></h4>
                                             <ul className="info">
                                                 <li><i className="ri-time-line"></i>{data.duration}</li>
@@ -302,7 +302,7 @@ const Home = () => {
                                             </ul>
                                             <p>{data.shortDescription}</p>
                                             <div className="tour-btn-box">
-                                                <Link to={`tour-details/${data.id}`}>See Details</Link>
+                                                <Link to={`/tour/${data.id}`}>See Details</Link>
                                             </div>
                                         </div>
                                     </div>
