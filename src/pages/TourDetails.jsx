@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { useLoaderData } from "react-router-dom";
-import { Search, Sponsor } from "../components/widget";
+import { BookForm, Download, Sponsor } from "../components/widget";
 
 const TourDetails = () => {
     const tours = useLoaderData()
@@ -62,7 +62,8 @@ const TourDetails = () => {
                         </Col>
                         <Col lg={4} md={12} sm={12}>
                             <div className="ms-3 sidebar-sticky">
-                                <Search></Search>
+                                <BookForm></BookForm>
+                                <Download></Download>
                                 <Sponsor></Sponsor>
                             </div>
                         </Col>
