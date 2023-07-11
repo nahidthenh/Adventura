@@ -11,7 +11,8 @@ import {
     Signin,
     Signup,
     DestinationDetails,
-    TourDetails
+    TourDetails,
+    BlogDetails
 } from '../pages/index'
 export const router = createBrowserRouter([
     {
@@ -54,6 +55,13 @@ export const router = createBrowserRouter([
                     return fetch('https://adventura-server.vercel.app/blog')
                 }),
                 element: <Blog></Blog>
+            },
+            {
+                path: '/blog-details/:id',
+                loader: (({ params }) => {
+                    return fetch(`https://adventura-server.vercel.app/blog/${params.id}`)
+                }),
+                element: <BlogDetails></BlogDetails>
             },
             {
                 path: '/contact',
