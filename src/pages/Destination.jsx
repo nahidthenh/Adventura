@@ -20,7 +20,7 @@ const Destination = () => {
                                     <div className="destination-cover">
                                         <img src={data.image} alt="" />
                                     </div>
-                                    <Link to={`destination-details/${data.id}`}><h3>{data.place}</h3></Link>
+                                    <Link to={`/destination-details/${data.id}`}><h3>{data.place}</h3></Link>
                                 </div>
                             </Col>
                         ))

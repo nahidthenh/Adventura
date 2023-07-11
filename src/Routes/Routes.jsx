@@ -11,6 +11,7 @@ import {
     Signin,
     Signup
 } from '../pages/index'
+import DestinationDetails from "../pages/DestinationDetails";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -26,6 +27,11 @@ export const router = createBrowserRouter([
                     return fetch('http://localhost:5000/destinations')
                 }),
                 element: <Destination></Destination>
+            },
+            {
+                path: '/destination-details/:id',
+                loader: ({ params }) => fetch(`http://localhost:5000/destination-details/${params.id}`),
+                element: <DestinationDetails></DestinationDetails>
             },
             {
                 path: '/tour',
