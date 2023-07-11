@@ -25,33 +25,33 @@ export const router = createBrowserRouter([
             {
                 path: '/destination',
                 loader: (() => {
-                    return fetch('http://localhost:5000/destinations')
+                    return fetch('https://adventura-server.vercel.app/destinations')
                 }),
                 element: <Destination></Destination>
             },
             {
                 path: '/destinations/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/destinations/${params.id}`),
+                loader: ({ params }) => fetch(`https://adventura-server.vercel.app/destinations/${params.id}`),
                 element: <DestinationDetails></DestinationDetails>
             },
             {
                 path: '/tour',
                 loader: (() => {
-                    return fetch('http://localhost:5000/tour')
+                    return fetch('https://adventura-server.vercel.app/tour')
                 }),
                 element: <Tour></Tour>
             },
             {
                 path: '/tour/:id',
                 loader: (({ params }) => {
-                    return fetch(`http://localhost:5000/tour/${params.id}`)
+                    return fetch(`https://adventura-server.vercel.app/tour/${params.id}`)
                 }),
                 element: <TourDetails></TourDetails>
             },
             {
                 path: '/blog',
                 loader: (() => {
-                    return fetch('http://localhost:5000/blog')
+                    return fetch('https://adventura-server.vercel.app/blog')
                 }),
                 element: <Blog></Blog>
             },

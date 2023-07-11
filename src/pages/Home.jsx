@@ -18,7 +18,7 @@ const Home = () => {
 
     async function fetchData() {
         try {
-            const response = await axios.get('http://localhost:5000/whyus');
+            const response = await axios.get('https://adventura-server.vercel.app/whyus');
             setWhyus(response.data);
         } catch (error) {
             console.error(error);
@@ -35,7 +35,7 @@ const Home = () => {
 
     async function fetchDestinationDataData() {
         try {
-            const response = await axios.get('http://localhost:5000/destinations');
+            const response = await axios.get('https://adventura-server.vercel.app/destinations');
             setDestinationData(response.data);
         } catch (error) {
             console.error(error);
@@ -52,7 +52,7 @@ const Home = () => {
 
     async function fetchTourDataData() {
         try {
-            const response = await axios.get('http://localhost:5000/tour');
+            const response = await axios.get('https://adventura-server.vercel.app/tour');
             setTourData(response.data);
         } catch (error) {
             console.error(error);
@@ -69,7 +69,7 @@ const Home = () => {
 
     async function fetchTestimonialsData() {
         try {
-            const response = await axios.get('http://localhost:5000/testimonials');
+            const response = await axios.get('https://adventura-server.vercel.app/testimonials');
             setTestimonialsData(response.data);
         } catch (error) {
             console.error(error);
@@ -86,7 +86,7 @@ const Home = () => {
 
     async function fetchBlogData() {
         try {
-            const response = await axios.get('http://localhost:5000/blog');
+            const response = await axios.get('https://adventura-server.vercel.app/blog');
             setBlogData(response.data);
         } catch (error) {
             console.error(error);
