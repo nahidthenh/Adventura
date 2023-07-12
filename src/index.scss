@@ -1498,3 +1498,27 @@ label.form-check-label {
         color: #808080;
     }
 }
+
+// Latest News Widget 
+
+.blog-category-wrap {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 15px 0;
+    border-bottom: 1px solid #e6ebeb;
+
+    a {
+        text-decoration: none;
+        color: #808080;
+
+        h3 {
+            font-size: 17px;
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        margin-right: 20px;
+    }
+}

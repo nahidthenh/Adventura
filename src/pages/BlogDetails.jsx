@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { useLoaderData } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
-import { Download, Search, Sponsor } from "../components/widget";
+import { Download, LatestNews, Search, Sponsor } from "../components/widget";
 const BlogDetails = () => {
     const blogs = useLoaderData()
     const { image, blogTitle, description, postDate } = blogs
@@ -22,6 +22,7 @@ const BlogDetails = () => {
                         <Col lg={4} md={12} sm={12}>
                             <div className="ms-3 sidebar-sticky">
                                 <Search></Search>
+                                <LatestNews></LatestNews>
                                 <Download></Download>
                                 <Sponsor></Sponsor>
                             </div>
