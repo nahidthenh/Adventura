@@ -3,6 +3,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthProvider";
+import { toast } from "react-hot-toast";
 
 
 const Signup = () => {
@@ -40,9 +41,12 @@ const Signup = () => {
                 console.log(user);
                 form.reset()
                 handleUpdateUserProfile(name, photoURL)
+                toast.success('Please Verify Your Email Account!')
+                // redirect to login page code in bottom
             })
             .catch((error) => {
                 console.error('Error is ', error);
+                toast.error('Something Went Wrong !')
             });
     }
     // update profile
