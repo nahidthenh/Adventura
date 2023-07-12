@@ -1,9 +1,22 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthProvider";
 
 
 const Signup = () => {
+    const { googleLogin } = useContext(AuthContext)
+    const handleGoogleLogin = () => {
+        googleLogin()
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+            }).catch((error) => {
+                console.log('Error Is,', error);
+            });
+    }
+
     return (
         <div className="default-margin-top">
             <Breadcrumbs title='Sign Up.' description='Create a Account For Discover your next great adventure.'></Breadcrumbs>
@@ -13,7 +26,7 @@ const Signup = () => {
                         <div className="auth-form-wrap">
                             <h3 className="mb-4">Sign Up with</h3>
                             <div className="signin-btn-group">
-                                <button type="button" className="user-auth-btn me-2">Google</button>
+                                <button onClick={handleGoogleLogin} type="button" className="user-auth-btn me-2">Google</button>
                                 <button type="button" className="user-auth-btn ms-2">Github</button>
                             </div>
                             <div className="auth-text my-4"><span>or</span></div>
