@@ -46,12 +46,8 @@ const Signup = () => {
                                 </Row>
                                 <Row>
                                     <Col><input className="d-block w-100 mb-4 auth-input" type="email" name="email" placeholder="Enter Your Email " /></Col>
-                                </Row>
-                                <Row>
                                     <Col> <input className="d-block w-100 mb-4 auth-input" type="password" name="password" placeholder="Enter Your Password " /></Col>
-                                    <Col> <input className="d-block w-100 mb-4 auth-input" type="password" name="confirmPassword" placeholder="Enter Your Confirm Password " /></Col>
                                 </Row>
-
                                 <div className="form-check mb-4">
                                     <input className="form-check-input" type="checkbox" />
                                     <label className="form-check-label">
