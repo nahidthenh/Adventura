@@ -3,6 +3,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthProvider";
+import { toast } from "react-hot-toast";
 
 
 const Signin = () => {
@@ -14,8 +15,10 @@ const Signin = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user);
+                toast.success('Successfully Google Loged in!')
             }).catch((error) => {
                 console.log('Error Is,', error);
+                toast.error('Something Went Wrong !')
             });
     }
 
@@ -24,8 +27,10 @@ const Signin = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user);
+                toast.success('Successfully GitHub Loged in!')
             }).catch((error) => {
                 console.log('Error Is,', error);
+                toast.error('Something Went Wrong !')
             });
     }
 
@@ -40,6 +45,7 @@ const Signin = () => {
                 const user = userCredential.user;
                 console.log(user);
                 form.reset()
+                toast.success('Successfully Loged in!')
             })
             .catch((error) => {
                 console.log('Error', error);

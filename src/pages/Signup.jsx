@@ -14,8 +14,10 @@ const Signup = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user);
+                toast.success('Successfully Google Loged in!')
             }).catch((error) => {
                 console.log('Error Is,', error);
+                toast.error('Something Went Wrong !')
             });
     }
     const handleGitHubLogin = () => {
@@ -23,8 +25,10 @@ const Signup = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user);
+                toast.success('Successfully GitHub Loged in!')
             }).catch((error) => {
                 console.log('Error Is,', error);
+                toast.error('Something Went Wrong !')
             });
     }
     const hnadleCreateAccount = (event) => {
