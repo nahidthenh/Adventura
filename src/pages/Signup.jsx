@@ -1,12 +1,13 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthProvider";
 
 
 const Signup = () => {
-    const { googleLogin, githubLogin } = useContext(AuthContext)
+    const { googleLogin, githubLogin, createAccountWithEmailPws } = useContext(AuthContext)
+    const [aggery, setAggery] = useState(false)
     const handleGoogleLogin = () => {
         googleLogin()
             .then((result) => {
@@ -25,6 +26,27 @@ const Signup = () => {
                 console.log('Error Is,', error);
             });
     }
+    const hnadleCreateAccount = (event) => {
+        event.preventDefault()
+        const form = event.target
+        const name = form.email.value
+        const photoURL = form.photo.value
+        const email = form.email.value
+        const password = form.password.value
+
+        createAccountWithEmailPws(email, password)
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch((error) => {
+                console.error('Error is ', error);
+            });
+    }
+
+    const handleTos = () => {
+        setAggery(event.target.checked)
+    }
 
     return (
         <div className="default-margin-top">
@@ -39,23 +61,23 @@ const Signup = () => {
                                 <button onClick={handleGitHubLogin} type="button" className="user-auth-btn ms-2">Github</button>
                             </div>
                             <div className="auth-text my-4"><span>or</span></div>
-                            <form className="auth-form">
+                            <form onSubmit={hnadleCreateAccount} className="auth-form">
                                 <Row>
-                                    <Col><input className="d-block w-100 mb-4 auth-input" type="text" name="name" placeholder="Enter Your Name " /></Col>
-                                    <Col> <input className="d-block w-100 mb-4 auth-input" type="text" name="photo" placeholder="Enter Your Photo URL " /></Col>
+                                    <Col><input className="d-block w-100 mb-4 auth-input" type="text" name="name" placeholder="Enter Your Name " required /></Col>
+                                    <Col> <input className="d-block w-100 mb-4 auth-input" type="text" name="photo" placeholder="Enter Your Photo URL " required /></Col>
                                 </Row>
                                 <Row>
-                                    <Col><input className="d-block w-100 mb-4 auth-input" type="email" name="email" placeholder="Enter Your Email " /></Col>
-                                    <Col> <input className="d-block w-100 mb-4 auth-input" type="password" name="password" placeholder="Enter Your Password " /></Col>
+                                    <Col><input className="d-block w-100 mb-4 auth-input" type="email" name="email" placeholder="Enter Your Email " required /></Col>
+                                    <Col> <input className="d-block w-100 mb-4 auth-input" type="password" name="password" placeholder="Enter Your Password " required /></Col>
                                 </Row>
                                 <div className="form-check mb-4">
-                                    <input className="form-check-input" type="checkbox" />
-                                    <label className="form-check-label">
+                                    <input className="form-check-input" id="tos" type="checkbox" onClick={handleTos} />
+                                    <label className="form-check-label" htmlFor="tos">
                                         I Aggery With <Link to='tos'>Tos</Link>
                                     </label>
                                 </div>
 
-                                <button className="mb-4 w-100" type="submit">Create Account</button>
+                                <button disabled={!aggery} className="mb-4 w-100" type="submit">Create Account</button>
                             </form>
                             <div className="other-text text-center">Already have an account ? <Link to='/signin'>Login Now</Link></div>
                         </div>
