@@ -37,7 +37,6 @@ span.logout-btn {
     transition: all 500ms ease;
     margin-left: 25px;
     margin-top: 2px;
-    cursor: pointer;
 }
 
 img.header-logo {
@@ -772,8 +771,8 @@ img.header-logo {
 
             li {
                 position: relative;
+                // display: inline-block;.
                 float: left;
-                display: inline-block;
                 font-size: 15px;
                 color: #808080;
                 font-weight: 500;
