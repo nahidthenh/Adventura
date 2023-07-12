@@ -1,8 +1,14 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import headerLogo from '../assets/images/logo.png'
 import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from './../context/AuthProvider';
 
 const Header = () => {
+
+    const user = useContext(AuthContext)
+
+    console.log(user);
     return (
         <>
             <Navbar collapseOnSelect expand="lg" className="bg-white py-3 border-bottom" fixed="top">
@@ -20,7 +26,7 @@ const Header = () => {
                             <NavLink as={Link} to='/blog'>Blog</NavLink>
                             <NavLink as={Link} to='/contact'>Contact</NavLink>
                             <NavLink className='header-signin-btn' as={Link} to='/signin' >Join</NavLink>
-                            {/* <NavLink as={Link} to='/profile' >Md. Nahid Hasan</NavLink> */}
+                            <NavLink as={Link} to='/profile' >{user.displayName}</NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
