@@ -29,8 +29,8 @@ const Signup = () => {
     const hnadleCreateAccount = (event) => {
         event.preventDefault()
         const form = event.target
-        const name = form.email.value
-        const photoURL = form.photo.value
+        // const name = form.email.value
+        // const photoURL = form.photo.value
         const email = form.email.value
         const password = form.password.value
 
@@ -38,6 +38,7 @@ const Signup = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user);
+                form.reset()
             })
             .catch((error) => {
                 console.error('Error is ', error);
