@@ -14,6 +14,7 @@ import {
     TourDetails,
     BlogDetails
 } from '../pages/index'
+import PrivateRoute from "./PrivateRoute";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -33,7 +34,7 @@ export const router = createBrowserRouter([
             {
                 path: '/destinations/:id',
                 loader: ({ params }) => fetch(`https://adventura-server.vercel.app/destinations/${params.id}`),
-                element: <DestinationDetails></DestinationDetails>
+                element: <PrivateRoute><DestinationDetails></DestinationDetails></PrivateRoute>
             },
             {
                 path: '/tour',
@@ -47,7 +48,7 @@ export const router = createBrowserRouter([
                 loader: (({ params }) => {
                     return fetch(`https://adventura-server.vercel.app/tour/${params.id}`)
                 }),
-                element: <TourDetails></TourDetails>
+                element: <PrivateRoute><TourDetails></TourDetails></PrivateRoute>
             },
             {
                 path: '/blog',
@@ -61,7 +62,7 @@ export const router = createBrowserRouter([
                 loader: (({ params }) => {
                     return fetch(`https://adventura-server.vercel.app/blog/${params.id}`)
                 }),
-                element: <BlogDetails></BlogDetails>
+                element: <PrivateRoute><BlogDetails></BlogDetails></PrivateRoute>
             },
             {
                 path: '/contact',
@@ -69,7 +70,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/profile',
-                element: <Profile></Profile>
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>
             },
             {
                 path: '/signin',
