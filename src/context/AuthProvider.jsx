@@ -78,6 +78,7 @@ const AuthProvider = ({ children }) => {
         updateUserProfile,
         userLogOut,
         sendVerifyEmail,
+        setLoading,
         user,
         loading
     }

@@ -1,14 +1,21 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Form, Row } from "react-bootstrap";
 import Breadcrumbs from "../components/Breadcrumbs";
-import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import { toast } from "react-hot-toast";
 
 
 const Signin = () => {
 
-    const { googleLogin, githubLogin, loginAccountWithEmailPws } = useContext(AuthContext)
+    const { googleLogin, githubLogin, loginAccountWithEmailPws, setLoading } = useContext(AuthContext)
+    const navigate = useNavigate()
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/";
+
+
+    const [error, setError] = useState('')
 
     const handleGoogleLogin = () => {
         googleLogin()
@@ -45,11 +52,20 @@ const Signin = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset()
-                toast.success('Successfully Loged in!')
+                if (user.emailVerified) {
+                    navigate(from, { replace: true });
+                    toast.success('Successfully Loged in!')
+                } else {
+                    toast.error("Your Email Not Verify ! Please Verify Your Email.")
+                }
             })
             .catch((error) => {
-                console.log('Error', error);
-            });
+                console.error('Error', error);
+                setError(error.message)
+            })
+            .finally(() => {
+                setLoading(false)
+            })
     }
 
     return (
@@ -68,7 +84,11 @@ const Signin = () => {
                             <form onSubmit={handleEmailPwsLogin} className="auth-form">
                                 <input className="d-block w-100 mb-4 auth-input" type="email" name="email" placeholder="Enter Your Email " />
                                 <input className="d-block w-100 mb-4 auth-input" type="password" name="password" placeholder="Enter Your Password " />
+
                                 <button className="mb-4" type="submit">Submit</button>
+                                <Form.Text className="text-danger">
+                                    <div className=" mb-4">{error}</div>
+                                </Form.Text>
                             </form>
                             <div className="other-text">Dont have an account ? <Link to='/signup'>Register Now</Link></div>
                         </div>
