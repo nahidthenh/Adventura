@@ -12,10 +12,12 @@ const BlogDetails = () => {
                 <Container>
                     <Row>
                         <Col lg={8} md={12} sm={12}>
-                            <img src={image} alt="" />
-                            <small>{postDate}</small>
-                            <h3>{blogTitle}</h3>
-                            <p>{description}</p>
+                            <div className="blog-details-item">
+                                <img src={image} alt="" />
+                                <small>{postDate}</small>
+                                <h3>{blogTitle}</h3>
+                                <p>{description}</p>
+                            </div>
                         </Col>
                         <Col lg={4} md={12} sm={12}>
                             <div className="ms-3 sidebar-sticky">

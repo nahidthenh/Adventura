@@ -1470,3 +1470,31 @@ label.form-check-label {
         transition: all 500ms ease;
     }
 }
+
+// Blog Details Page 
+
+.blog-details-item {
+    img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    small {
+        margin-bottom: 10px;
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    h3 {
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 18px;
+        color: #808080;
+    }
+}
