@@ -6,7 +6,7 @@ import { AuthContext } from './../context/AuthProvider';
 
 const Header = () => {
 
-    const user = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
 
     console.log(user);
     return (
@@ -25,8 +25,13 @@ const Header = () => {
                             <NavLink as={Link} to='/tour'>Tour</NavLink>
                             <NavLink as={Link} to='/blog'>Blog</NavLink>
                             <NavLink as={Link} to='/contact'>Contact</NavLink>
-                            <NavLink className='header-signin-btn' as={Link} to='/signin' >Join</NavLink>
-                            <NavLink as={Link} to='/profile' >{user.displayName}</NavLink>
+                            {user?.uid ? <>
+                                <NavLink as={Link} to='/profile' >{user?.displayName}</NavLink>
+                                <button>Logout</button>
+                            </>
+                                :
+                                <NavLink className='header-signin-btn' as={Link} to='/signin' >Join</NavLink>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
