@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Link, useLoaderData } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
+import ScrollToTop from "../components/others/ScrollToTop";
 
 const Destination = () => {
 
@@ -27,6 +28,7 @@ const Destination = () => {
                     }
                 </Row>
             </Container>
+            <ScrollToTop />
         </div>
     );
 };

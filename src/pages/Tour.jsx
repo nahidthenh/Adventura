@@ -2,11 +2,12 @@ import { Col, Container, Row } from "react-bootstrap";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Link, useLoaderData } from "react-router-dom";
 import { Category, Durations, ReviewScore, Search, Sponsor } from "../components/widget";
+import ScrollToTop from './../components/others/ScrollToTop';
+
 
 
 const Tour = () => {
     const tours = useLoaderData()
-    // console.log(tours);
     return (
         <div className="default-margin-top">
             <Breadcrumbs title='Our Tours List' description='Discover your next great adventure'></Breadcrumbs>
@@ -51,6 +52,7 @@ const Tour = () => {
                     </Col>
                 </Row>
             </Container>
+            <ScrollToTop />
         </div>
     );
 };

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Header, Footer } from '../pages/index'
+import ScrollToTop from '../components/others/ScrollToTop';
 
 const Error = () => {
     return (
@@ -16,6 +17,7 @@ const Error = () => {
                 </div>
             </div>
             <Footer></Footer>
+            <ScrollToTop />
         </>
     );
 };

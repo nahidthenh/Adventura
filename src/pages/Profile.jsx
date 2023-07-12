@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import { Col, Container, Row } from "react-bootstrap";
+import ScrollToTop from './../components/others/ScrollToTop';
 
 const Profile = () => {
     const { user } = useContext(AuthContext)
@@ -15,6 +16,7 @@ const Profile = () => {
                     </Col>
                 </Row>
             </Container>
+            <ScrollToTop />
         </div>
     );
 };

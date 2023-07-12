@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import { toast } from "react-hot-toast";
+import ScrollToTop from "../components/others/ScrollToTop";
 
 
 const Signin = () => {
@@ -105,6 +106,7 @@ const Signin = () => {
                     </Col>
                 </Row>
             </Container>
+            <ScrollToTop />
         </div>
     );
 };

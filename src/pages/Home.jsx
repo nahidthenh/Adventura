@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 // Import Swiper React components Start
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCreative } from 'swiper/modules';
+import ScrollToTop from "../components/others/ScrollToTop";
 // Import Swiper React components End
 const Home = () => {
     const [whyus, setWhyus] = useState([]);
@@ -392,6 +393,7 @@ const Home = () => {
                     </Row>
                 </Container>
             </div>
+            <ScrollToTop />
         </div>
     );
 };

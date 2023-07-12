@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Col, Container, Row } from "react-bootstrap";
 import { Category, Search, Sponsor } from "../components/widget";
+import ScrollToTop from "../components/others/ScrollToTop";
 const DestinationDetails = () => {
     const destinations = useLoaderData();
     const { place, description, countryDetails, photoGallery } = destinations;
@@ -55,6 +56,7 @@ const DestinationDetails = () => {
                     </Col>
                 </Row>
             </Container>
+            <ScrollToTop />
         </div >
     );
 };

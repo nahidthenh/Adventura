@@ -15,6 +15,7 @@ import {
     BlogDetails
 } from '../pages/index'
 import PrivateRoute from "./PrivateRoute";
+
 export const router = createBrowserRouter([
     {
         path: "/",

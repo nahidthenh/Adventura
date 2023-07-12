@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import { toast } from "react-hot-toast";
+import ScrollToTop from "../components/others/ScrollToTop";
 
 
 const Signup = () => {
@@ -123,6 +124,7 @@ const Signup = () => {
                     </Col>
                 </Row>
             </Container>
+            <ScrollToTop/>
         </div>
     );
 };

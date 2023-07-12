@@ -2,6 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Category, Search, Sponsor } from "../components/widget";
 import { Link, useLoaderData } from "react-router-dom";
+import ScrollToTop from "../components/others/ScrollToTop";
 
 
 const Blog = () => {
@@ -43,6 +44,7 @@ const Blog = () => {
                     </Col>
                 </Row>
             </Container>
+            <ScrollToTop />
         </div>
     );
 };

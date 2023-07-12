@@ -1,6 +1,7 @@
 
 import { Col, Container, Row } from 'react-bootstrap';
 import Breadcrumbs from '../components/Breadcrumbs'
+import ScrollToTop from '../components/others/ScrollToTop';
 const Contact = () => {
     return (
         <div className="default-margin-top">
@@ -59,6 +60,7 @@ const Contact = () => {
                     </Col>
                 </Row>
             </Container>
+            <ScrollToTop />
         </div>
     );
 };

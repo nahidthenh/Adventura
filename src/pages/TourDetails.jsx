@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { useLoaderData } from "react-router-dom";
 import { BookForm, Download, Sponsor } from "../components/widget";
+import ScrollToTop from './../components/others/ScrollToTop';
 
 const TourDetails = () => {
     const tours = useLoaderData()
@@ -70,6 +71,7 @@ const TourDetails = () => {
                     </Row>
                 </Container>
             </div>
+            <ScrollToTop />
         </div>
     );
 };

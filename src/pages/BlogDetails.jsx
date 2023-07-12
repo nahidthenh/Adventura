@@ -2,6 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { useLoaderData } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Download, LatestNews, Search, Sponsor } from "../components/widget";
+import ScrollToTop from "../components/others/ScrollToTop";
 const BlogDetails = () => {
     const blogs = useLoaderData()
     const { image, blogTitle, description, postDate } = blogs
@@ -30,6 +31,7 @@ const BlogDetails = () => {
                     </Row>
                 </Container>
             </div>
+            <ScrollToTop />
         </div>
     );
 };
