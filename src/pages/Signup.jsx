@@ -6,7 +6,7 @@ import { AuthContext } from "../context/AuthProvider";
 
 
 const Signup = () => {
-    const { googleLogin, githubLogin, createAccountWithEmailPws } = useContext(AuthContext)
+    const { googleLogin, githubLogin, createAccountWithEmailPws, updateUserProfile } = useContext(AuthContext)
     const [aggery, setAggery] = useState(false)
     const handleGoogleLogin = () => {
         googleLogin()
@@ -29,8 +29,8 @@ const Signup = () => {
     const hnadleCreateAccount = (event) => {
         event.preventDefault()
         const form = event.target
-        // const name = form.email.value
-        // const photoURL = form.photo.value
+        const name = form.name.value
+        const photoURL = form.photo.value
         const email = form.email.value
         const password = form.password.value
 
@@ -39,12 +39,25 @@ const Signup = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset()
+                handleUpdateUserProfile(name, photoURL)
             })
             .catch((error) => {
                 console.error('Error is ', error);
             });
     }
+    // update profile
 
+    const handleUpdateUserProfile = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+        }
+        updateUserProfile(profile)
+            .then(() => { })
+            .catch((error) => {
+                console.error('Error Is ', error);
+            });
+    }
     const handleTos = () => {
         setAggery(event.target.checked)
     }
