@@ -7,7 +7,7 @@ import { toast } from "react-hot-toast";
 
 
 const Signup = () => {
-    const { googleLogin, githubLogin, createAccountWithEmailPws, updateUserProfile } = useContext(AuthContext)
+    const { googleLogin, githubLogin, createAccountWithEmailPws, updateUserProfile, sendVerifyEmail } = useContext(AuthContext)
     const [aggery, setAggery] = useState(false)
     const handleGoogleLogin = () => {
         googleLogin()
@@ -45,8 +45,8 @@ const Signup = () => {
                 console.log(user);
                 form.reset()
                 handleUpdateUserProfile(name, photoURL)
+                handleEmailVerification()
                 toast.success('Please Verify Your Email Account!')
-                // redirect to login page code in bottom
             })
             .catch((error) => {
                 console.error('Error is ', error);
@@ -66,6 +66,15 @@ const Signup = () => {
                 console.error('Error Is ', error);
             });
     }
+
+    // send email verification link
+
+    const handleEmailVerification = () => {
+        sendVerifyEmail()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
+
     const handleTos = () => {
         setAggery(event.target.checked)
     }

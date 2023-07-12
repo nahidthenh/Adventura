@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from 'react';
 import app from './../firebase/firebase.init';
-import { GoogleAuthProvider, GithubAuthProvider, getAuth, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut } from "firebase/auth";
+import { GoogleAuthProvider, GithubAuthProvider, getAuth, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut, sendEmailVerification } from "firebase/auth";
 
 
 export const AuthContext = createContext()
@@ -20,20 +20,22 @@ const AuthProvider = ({ children }) => {
 
     // Google SignIn
     const googleLogin = () => {
-        // setLoading(true)
+        setLoading(true)
         return signInWithPopup(auth, googleProvider)
     }
     // GitHub SignIn 
     const githubLogin = () => {
-        // setLoading(true)
+        setLoading(true)
         return signInWithPopup(auth, githubProvider)
     }
     // Create Account with email password 
     const createAccountWithEmailPws = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
     // Login Account With email password
     const loginAccountWithEmailPws = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
@@ -43,7 +45,11 @@ const AuthProvider = ({ children }) => {
     }
 
     const userLogOut = () => {
+        setLoading(true)
         return signOut(auth)
+    }
+    const sendVerifyEmail = () => {
+        return sendEmailVerification(auth.currentUser)
     }
 
     // Use Effect 
@@ -71,6 +77,7 @@ const AuthProvider = ({ children }) => {
         loginAccountWithEmailPws,
         updateUserProfile,
         userLogOut,
+        sendVerifyEmail,
         user,
         loading
     }
