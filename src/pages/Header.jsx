@@ -12,6 +12,7 @@ const Header = () => {
     const logOutUser = () => {
         userLogOut()
             .then(() => {
+                alert('Are Your Sure ?')
                 toast.success('Successfully LogOut')
             }).catch((error) => {
                 console.error(error);
@@ -36,7 +37,7 @@ const Header = () => {
                             <NavLink as={Link} to='/contact'>Contact</NavLink>
                             {user?.uid ? <>
                                 <NavLink as={Link} to='/profile' >{user?.displayName}</NavLink>
-                                <button onClick={logOutUser}>Logout</button>
+                                <span className="logout-btn" onClick={logOutUser}> <i className="ri-logout-box-r-line"></i> </span>
                             </>
                                 :
                                 <NavLink className='header-signin-btn' as={Link} to='/signin' >Join</NavLink>
