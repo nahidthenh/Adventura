@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Form, Row } from "react-bootstrap";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
@@ -8,6 +8,7 @@ import { toast } from "react-hot-toast";
 
 const Signup = () => {
     const { googleLogin, githubLogin, createAccountWithEmailPws, updateUserProfile, sendVerifyEmail } = useContext(AuthContext)
+    const [error, setError] = useState('')
     const [aggery, setAggery] = useState(false)
     const handleGoogleLogin = () => {
         googleLogin()
@@ -44,12 +45,14 @@ const Signup = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset()
+                setError('')
                 handleUpdateUserProfile(name, photoURL)
                 handleEmailVerification()
                 toast.success('Please Verify Your Email Account!')
             })
             .catch((error) => {
                 console.error('Error is ', error);
+                setError(error.message)
                 toast.error('Something Went Wrong !')
             });
     }
@@ -100,6 +103,11 @@ const Signup = () => {
                                 <Row>
                                     <Col><input className="d-block w-100 mb-4 auth-input" type="email" name="email" placeholder="Enter Your Email " required /></Col>
                                     <Col> <input className="d-block w-100 mb-4 auth-input" type="password" name="password" placeholder="Enter Your Password " required /></Col>
+                                </Row>
+                                <Row>
+                                    <Form.Text className="text-danger">
+                                        {error}
+                                    </Form.Text>
                                 </Row>
                                 <div className="form-check mb-4">
                                     <input className="form-check-input" id="tos" type="checkbox" onClick={handleTos} />
