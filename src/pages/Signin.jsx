@@ -41,8 +41,8 @@ const Signin = () => {
         const password = form.password.value
 
         loginAccountWithEmailPws(email, password)
-            .then((userCredential) => {
-                const user = userCredential.user;
+            .then((result) => {
+                const user = result.user;
                 console.log(user);
                 form.reset()
                 toast.success('Successfully Loged in!')

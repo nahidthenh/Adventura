@@ -3,12 +3,21 @@ import headerLogo from '../assets/images/logo.png'
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from './../context/AuthProvider';
+import { toast } from "react-hot-toast";
 
 const Header = () => {
 
-    const { user } = useContext(AuthContext)
+    const { user, userLogOut } = useContext(AuthContext)
 
-    console.log(user);
+    const logOutUser = () => {
+        userLogOut()
+            .then(() => {
+                toast.success('Successfully LogOut')
+            }).catch((error) => {
+                console.error(error);
+            });
+    }
+
     return (
         <>
             <Navbar collapseOnSelect expand="lg" className="bg-white py-3 border-bottom" fixed="top">
@@ -27,7 +36,7 @@ const Header = () => {
                             <NavLink as={Link} to='/contact'>Contact</NavLink>
                             {user?.uid ? <>
                                 <NavLink as={Link} to='/profile' >{user?.displayName}</NavLink>
-                                <button>Logout</button>
+                                <button onClick={logOutUser}>Logout</button>
                             </>
                                 :
                                 <NavLink className='header-signin-btn' as={Link} to='/signin' >Join</NavLink>

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from 'react';
 import app from './../firebase/firebase.init';
-import { GoogleAuthProvider, GithubAuthProvider, getAuth, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged } from "firebase/auth";
+import { GoogleAuthProvider, GithubAuthProvider, getAuth, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut } from "firebase/auth";
 
 
 export const AuthContext = createContext()
@@ -42,6 +42,9 @@ const AuthProvider = ({ children }) => {
         return updateProfile(auth.currentUser, profile)
     }
 
+    const userLogOut = () => {
+        return signOut(auth)
+    }
 
     // Use Effect 
     useEffect(() => {
@@ -67,6 +70,7 @@ const AuthProvider = ({ children }) => {
         createAccountWithEmailPws,
         loginAccountWithEmailPws,
         updateUserProfile,
+        userLogOut,
         user,
         loading
     }
