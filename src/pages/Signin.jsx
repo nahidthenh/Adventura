@@ -22,7 +22,12 @@ const Signin = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user);
-                toast.success('Successfully Google Loged in!')
+                if (user.emailVerified) {
+                    navigate(from, { replace: true });
+                    toast.success('Successfully Google Loged in!')
+                } else {
+                    toast.error("Your Email Not Verify ! Please Verify Your Email.")
+                }
             }).catch((error) => {
                 console.log('Error Is,', error);
                 toast.error('Something Went Wrong !')
@@ -34,7 +39,12 @@ const Signin = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user);
-                toast.success('Successfully GitHub Loged in!')
+                if (user.emailVerified) {
+                    navigate(from, { replace: true });
+                    toast.success('Successfully GitHub Loged in!')
+                } else {
+                    toast.error("Your Email Not Verify ! Please Verify Your Email.")
+                }
             }).catch((error) => {
                 console.log('Error Is,', error);
                 toast.error('Something Went Wrong !')
