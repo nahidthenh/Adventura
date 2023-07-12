@@ -7,7 +7,7 @@ import { AuthContext } from "../context/AuthProvider";
 
 const Signin = () => {
 
-    const { googleLogin, githubLogin } = useContext(AuthContext)
+    const { googleLogin, githubLogin, loginAccountWithEmailPws } = useContext(AuthContext)
 
     const handleGoogleLogin = () => {
         googleLogin()
@@ -29,6 +29,23 @@ const Signin = () => {
             });
     }
 
+    const handleEmailPwsLogin = (event) => {
+        event.preventDefault()
+        const form = event.target
+        const email = form.email.value
+        const password = form.password.value
+
+        loginAccountWithEmailPws(email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log(user);
+                form.reset()
+            })
+            .catch((error) => {
+                console.log('Error', error);
+            });
+    }
+
     return (
         <div className="default-margin-top">
             <Breadcrumbs title='Sign In.' description='Discover your next great adventure.'></Breadcrumbs>
@@ -42,7 +59,7 @@ const Signin = () => {
                                 <button onClick={handleGitHubLogin} type="button" className="user-auth-btn ms-2">Github</button>
                             </div>
                             <div className="auth-text my-4"><span>or</span></div>
-                            <form className="auth-form">
+                            <form onSubmit={handleEmailPwsLogin} className="auth-form">
                                 <input className="d-block w-100 mb-4 auth-input" type="email" name="email" placeholder="Enter Your Email " />
                                 <input className="d-block w-100 mb-4 auth-input" type="password" name="password" placeholder="Enter Your Password " />
                                 <button className="mb-4" type="submit">Submit</button>
