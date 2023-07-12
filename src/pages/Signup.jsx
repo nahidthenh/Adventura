@@ -6,9 +6,18 @@ import { AuthContext } from "../context/AuthProvider";
 
 
 const Signup = () => {
-    const { googleLogin } = useContext(AuthContext)
+    const { googleLogin, githubLogin } = useContext(AuthContext)
     const handleGoogleLogin = () => {
         googleLogin()
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+            }).catch((error) => {
+                console.log('Error Is,', error);
+            });
+    }
+    const handleGitHubLogin = () => {
+        githubLogin()
             .then((result) => {
                 const user = result.user;
                 console.log(user);
@@ -27,7 +36,7 @@ const Signup = () => {
                             <h3 className="mb-4">Sign Up with</h3>
                             <div className="signin-btn-group">
                                 <button onClick={handleGoogleLogin} type="button" className="user-auth-btn me-2">Google</button>
-                                <button type="button" className="user-auth-btn ms-2">Github</button>
+                                <button onClick={handleGitHubLogin} type="button" className="user-auth-btn ms-2">Github</button>
                             </div>
                             <div className="auth-text my-4"><span>or</span></div>
                             <form className="auth-form">
