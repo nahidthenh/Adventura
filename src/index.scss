@@ -4,10 +4,12 @@ $ColorThemePrimary:#061a3a;
 $ColorThemeSecondary:#ff7c5b;
 $ColorBg1:#f2f5f5;
 $ColorBg2:#f5f6f6;
+$ColorBg3:#e4e8e9;
 $ColorText1:#3a4760;
 $ColorText2:#001337;
 $ColorText3:#808080;
 $ColorBorder1:#e6ebeb;
+
 
 body {
     font-family: 'Work Sans',
@@ -201,7 +203,7 @@ img.header-logo {
     }
 
     .theme-btn {
-        background: #ff7c5b;
+        background: $ColorThemeSecondary;
         position: relative;
         max-width: 286px;
         width: 100%;
@@ -416,7 +418,7 @@ img.header-logo {
         z-index: 1;
         box-shadow: 0px 15px 25px 0px rgba(255, 124, 91, 0.3);
         transition: all 500ms ease;
-        background: #ff7c5b;
+        background: $ColorThemeSecondary;
         text-decoration: none;
     }
 }
@@ -539,7 +541,7 @@ img.header-logo {
             font-size: 24px;
             line-height: 32px;
             font-weight: 500;
-            color: #ff7c5b;
+            color: $ColorThemeSecondary;
         }
     }
 
@@ -747,7 +749,7 @@ img.header-logo {
             line-height: 28px;
             font-weight: 700;
             margin-bottom: 22px;
-            color: #ff7c5b;
+            color: $ColorThemeSecondary;
 
             span {
                 padding-left: 5px !important;
@@ -789,7 +791,7 @@ img.header-logo {
                 &:before {
                     position: absolute;
                     content: '';
-                    background: #e4e8e9;
+                    background: $ColorBg3;
                     width: 1px;
                     height: 20px;
                     top: 4px;
@@ -816,7 +818,7 @@ img.header-logo {
                 line-height: 26px;
                 color: $ColorThemePrimary;
                 font-weight: 500;
-                border: 1px solid #e4e8e9;
+                border: 1px solid $ColorBg3;
                 border-radius: 4px;
                 padding: 11px 28px;
                 text-align: center;
@@ -991,7 +993,7 @@ img.header-logo {
             line-height: 26px;
             color: $ColorThemePrimary;
             font-weight: 500;
-            border: 1px solid #e4e8e9;
+            border: 1px solid $ColorBg3;
             border-radius: 4px;
             padding: 11px 45px;
             text-align: center;
@@ -1086,7 +1088,7 @@ img.header-logo {
             line-height: 26px;
             color: $ColorText2;
             font-weight: 500;
-            border: 1px solid #e4e8e9;
+            border: 1px solid $ColorBg3;
             border-radius: 4px;
             padding: 11px 28px;
             text-align: center;
@@ -1247,7 +1249,7 @@ label.form-check-label {
     h1 {
         font-size: 120px;
         font-weight: 800;
-        color: #ff7c5b;
+        color: $ColorThemeSecondary;
     }
 
     h2 {
@@ -1329,7 +1331,7 @@ label.form-check-label {
     z-index: 1;
     box-shadow: 0px 15px 25px 0px rgba(255, 124, 91, 0.3);
     transition: all 500ms ease;
-    background: #ff7c5b;
+    background: $ColorThemeSecondary;
 }
 
 
@@ -1354,14 +1356,14 @@ label.form-check-label {
 .details-list {
     position: relative;
     display: block;
-    border: 1px solid #e4e8e9;
+    border: 1px solid $ColorBg3;
     margin-bottom: 30px !important;
 
     li {
         position: relative;
         display: block;
         padding: 0px 30px 0px 70px;
-        border-bottom: 1px solid #e4e8e9;
+        border-bottom: 1px solid $ColorBg3;
         font-size: 17px;
         font-weight: 500;
         color: #888888;
@@ -1388,7 +1390,7 @@ label.form-check-label {
             padding: 30px 0px 24px 60px;
             font-weight: 500;
             margin-right: 40px;
-            border-right: 1px solid #e4e8e9;
+            border-right: 1px solid $ColorBg3;
 
 
         }
@@ -1460,7 +1462,7 @@ label.form-check-label {
             font-size: 22px;
             line-height: 30px;
             font-weight: 700;
-            color: #ff7c5b;
+            color: $ColorThemeSecondary;
 
             span {
                 font-size: 15px;
@@ -1491,7 +1493,7 @@ label.form-check-label {
     button {
         font-size: 16px;
         line-height: 25px;
-        background-color: #ff7c5b;
+        background-color: $ColorThemeSecondary;
         font-weight: 500;
         color: $ColorWhite !important;
         padding: 10px 50px;
