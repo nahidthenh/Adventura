@@ -98,7 +98,7 @@ const Home = () => {
         <div className="default-margin-top">
             <div className="hero-area-wrap py-5">
                 <Container >
-                    <Row className="align-items-center">
+                    <Row className="align-items-center flex-column-reverse flex-lg-row">
                         <Col lg={6} sm={12} md={12}>
                             <div className="hero-content">
                                 <h1>Where would you like to go?</h1>
@@ -131,7 +131,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </Col>
-                        <Col lg={6} sm={12} md={12} className="col order-first">
+                        <Col lg={6} sm={12} md={12}>
                             <img className="img-fluid" src={heroImage} alt="Hero area images" />
                         </Col>
                     </Row>
@@ -407,7 +407,7 @@ const Home = () => {
                 </Container>
             </div>
             <ScrollToTop />
-        </div>
+        </div >
     );
 };
 
