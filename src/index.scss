@@ -1618,7 +1618,7 @@ label.form-check-label {
     }
 }
 
-@media (width: 375px) {
+@media (min-width: 375px) and (max-width:425px) {
 
     .navbar-nav a {
         text-align: left;
@@ -1641,6 +1641,45 @@ label.form-check-label {
 
     .form-group .theme-btn {
         max-width: 100%;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .why-us-block {
+        margin-bottom: 25px;
+    }
+
+    .about-us h2 {
+        font-size: 27px;
+        line-height: 40px;
+    }
+
+    .about-image.ms-5 {
+        margin-left: 0 !important;
+        margin-bottom: 30px;
+    }
+
+    .fan-fact-box {
+        margin-bottom: 10px;
+
+        h3 {
+            margin-bottom: 0;
+        }
+    }
+
+    .tour-single-item .tour-single-content .info li {
+        margin-right: 25px !important;
+    }
+
+    .details-list li {
+        margin-bottom: 25px;
+
+        span {
+            width: 100%;
+        }
     }
 
     // Footer 

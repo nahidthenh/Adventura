@@ -180,7 +180,7 @@ const Home = () => {
                                 <Link to='destination'>Find Now.</Link>
                             </div>
                         </Col>
-                        <Col lg={6} md={12} sm={12}>
+                        <Col lg={6} md={12} sm={12} className="col order-first">
                             <div className="about-image ms-5">
                                 <img src={aboutUs} alt="" />
                             </div>
@@ -225,6 +225,19 @@ const Home = () => {
                                     autoplay={{
                                         delay: 2500,
                                         disableOnInteraction: false,
+                                    }} breakpoints={{
+                                        375: {
+                                            slidesPerView: 1,
+                                            spaceBetween: 20,
+                                        },
+                                        768: {
+                                            slidesPerView: 4,
+                                            spaceBetween: 40,
+                                        },
+                                        1024: {
+                                            slidesPerView: 5,
+                                            spaceBetween: 50,
+                                        },
                                     }}
                                     modules={[Autoplay]}
                                     className="mySwiper"
