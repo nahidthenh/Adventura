@@ -1707,3 +1707,94 @@ label.form-check-label {
         margin-right: 20px;
     }
 }
+
+
+@media (width: 768px) {
+    .ms-3.sidebar-sticky {
+        margin-left: 0 !important;
+    }
+
+    .navbar-nav a {
+        text-align: left;
+    }
+
+    span.logout-btn {
+        text-align: left;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 14px;
+        line-height: 45px;
+    }
+
+    .form-group input {
+        max-width: 100%;
+    }
+
+    .form-group .theme-btn {
+        max-width: 100%;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .why-us-block {
+        margin-bottom: 25px;
+    }
+
+    .about-us h2 {
+        font-size: 27px;
+        line-height: 40px;
+    }
+
+    .about-image.ms-5 {
+        margin-left: 0 !important;
+        margin-bottom: 30px;
+    }
+
+    .fan-fact-box {
+        margin-bottom: 10px;
+
+        h3 {
+            margin-bottom: 0;
+        }
+    }
+
+    .tour-single-item .tour-single-content .info li {
+        margin-right: 25px !important;
+    }
+
+    .details-list li {
+        margin-bottom: 25px;
+
+        span {
+            width: 100%;
+        }
+    }
+
+    // Footer 
+
+    .footer-copyright.d-flex.justify-content-between.border-top.pt-4.mt-2 {
+        display: block !important;
+    }
+
+    .footer-copyright.d-flex.justify-content-between.border-top.pt-4.mt-2 .d-flex {
+        display: block !important;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .footer-copyright.d-flex.justify-content-between.border-top.pt-4.mt-2 .ms-4.d-flex {
+        text-align: center;
+        margin-left: 0 !important;
+    }
+
+    .footer-copyright.d-flex.justify-content-between.border-top.pt-4.mt-2 .ms-4.d-flex a {
+        margin-left: 0 !important;
+        margin-right: 20px;
+    }
+}
