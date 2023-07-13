@@ -1,4 +1,3 @@
-
 import { Col, Container, Row } from 'react-bootstrap';
 import Breadcrumbs from '../components/Breadcrumbs'
 import ScrollToTop from '../components/others/ScrollToTop';
@@ -38,7 +37,7 @@ const Contact = () => {
                 </Row>
                 <Row className='py-5'>
                     <Col lg={5}>
-                        <small className='text-danger'>Google Map WIll Be here 😁✌️</small>
+                        <small className='text-danger'>Google Map WIll Be here 😁✌️</small>                     
                     </Col>
                     <Col lg={7}>
                         <div className="contact-form-wrap p-4 rounded-3">
