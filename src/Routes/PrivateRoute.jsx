@@ -10,9 +10,13 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation()
 
     if (loading) {
-        return <Spinner animation="border" role="status">
-            <span className="visually-hidden">Please Wait Loading...</span>
-        </Spinner>
+        return <div className="default-margin-top container">
+            <div className="row">
+                <Spinner className="mx-auto my-5" animation="border" role="status">
+                    <span className="visually-hidden text-danger">Please Wait Loading...</span>
+                </Spinner>
+            </div>
+        </div>
     }
 
     if (!user) {
