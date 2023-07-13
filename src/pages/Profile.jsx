@@ -11,8 +11,8 @@ const Profile = () => {
                 <Row>
                     <Col lg={12}>
                         <h1>Welcome, {user.displayName}</h1>
-                        <p>Profile Page</p>
-                        <small className="text-danger">This Page Design underConstraction </small>
+                        <p>{user.email}</p>
+                        <img className="img-fluid rounded-3 my-3" src={user.photoURL} alt="Profile Photo" />
                     </Col>
                 </Row>
             </Container>
