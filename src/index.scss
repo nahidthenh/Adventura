@@ -1550,3 +1550,34 @@ label.form-check-label {
         margin-right: 20px;
     }
 }
+
+
+// Responsive Design 
+
+@media (width: 1366px) {
+    .why-us-block .lower-content h3 {
+        font-size: 17px;
+    }
+
+    .offers-single-item {
+        .content-box {
+            h3 {
+                font-size: 18px;
+            }
+
+            h4 {
+                font-size: 19px;
+            }
+        }
+    }
+
+    .tour-single-item {
+        .tour-single-content {
+            padding: 23px 25px 30px 33px;
+
+            .info li {
+                margin-right: 25px !important;
+            }
+        }
+    }
+}
