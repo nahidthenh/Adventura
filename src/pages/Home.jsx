@@ -131,7 +131,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </Col>
-                        <Col lg={6} sm={12} md={12}>
+                        <Col lg={6} sm={12} md={12} className="col order-first">
                             <img className="img-fluid" src={heroImage} alt="Hero area images" />
                         </Col>
                     </Row>
