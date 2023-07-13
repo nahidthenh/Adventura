@@ -169,7 +169,7 @@ const Home = () => {
             </div>
             <div className="about-us py-5">
                 <Container>
-                    <Row className="align-items-center">
+                    <Row className="align-items-center flex-column-reverse flex-lg-row">
                         <Col lg={6} md={12} sm={12}>
                             <div className="me-5">
                                 <p>About Adventura</p>
@@ -180,7 +180,7 @@ const Home = () => {
                                 <Link to='destination'>Find Now.</Link>
                             </div>
                         </Col>
-                        <Col lg={6} md={12} sm={12} className="col order-first">
+                        <Col lg={6} md={12} sm={12}>
                             <div className="about-image ms-5">
                                 <img src={aboutUs} alt="" />
                             </div>
@@ -235,8 +235,8 @@ const Home = () => {
                                             spaceBetween: 20,
                                         },
                                         1024: {
-                                            slidesPerView: 5,
-                                            spaceBetween: 50,
+                                            slidesPerView: 3,
+                                            spaceBetween: 20,
                                         },
                                     }}
                                     modules={[Autoplay]}
