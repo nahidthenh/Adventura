@@ -1619,6 +1619,9 @@ label.form-check-label {
 }
 
 @media (min-width: 375px) and (max-width:425px) {
+    .ms-3.sidebar-sticky {
+        margin-left: 0 !important;
+    }
 
     .navbar-nav a {
         text-align: left;
