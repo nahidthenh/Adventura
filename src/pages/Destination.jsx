@@ -6,7 +6,6 @@ import ScrollToTop from "../components/others/ScrollToTop";
 const Destination = () => {
 
     const destinations = useLoaderData()
-    console.log(destinations);
 
 
     return (
