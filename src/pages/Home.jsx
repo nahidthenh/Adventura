@@ -320,7 +320,7 @@ const Home = () => {
                             <p className="text-white">REVIEW & TESTIMONIALS</p>
                             <h2 style={{ fontSize: '35px' }}>Top Reviews for Your Motivition.</h2>
                         </div>
-                        <Col xl={6} className="mx-auto">
+                        <Col xl={6} md={6} className="mx-auto">
                             <>
                                 <Swiper
                                     slidesPerView={1}

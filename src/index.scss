@@ -1581,3 +1581,39 @@ label.form-check-label {
         }
     }
 }
+
+@media (width: 1024px) {
+    .why-us-block .lower-content h3 {
+        font-size: 14px;
+    }
+
+    .about-us h2 {
+        font-size: 27px;
+        line-height: inherit;
+    }
+
+    .offers-single-item {
+        .content-box {
+            h3 {
+                font-size: 14px;
+            }
+
+            h4 {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .tour-single-item .tour-single-content .info li {
+        margin-right: 1px !important;
+    }
+
+    .cta-wrap .cta-btn-group a {
+        font-size: 14px;
+        padding: 11px 36px;
+    }
+
+    .details-list li span {
+        width: 265px;
+    }
+}
