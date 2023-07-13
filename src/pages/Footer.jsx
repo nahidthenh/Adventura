@@ -86,10 +86,18 @@ const Footer = () => {
                                     </div>
                                 </div>
                                 <div className="ms-4 d-flex">
-                                    <a className="ms-3" target="blank" href="https://www.facebook.com/nahidthenh">Facebook</a>
-                                    <a className="ms-3" target="blank" href="https://www.youtube.com/@ndevs">YouTube</a>
-                                    <a className="ms-3" target="blank" href="https://www.instagram.com/nahidthenh">Instagram</a>
-                                    <a className="ms-3" target="blank" href="https://www.github.com/nahidthenh">GitHub</a>
+                                    <a className="ms-3" target="blank" href="https://www.facebook.com/nahidthenh">
+                                        <i className="ri-facebook-line"></i>
+                                    </a>
+                                    <a className="ms-3" target="blank" href="https://www.youtube.com/@ndevs">
+                                        <i className="ri-youtube-line"></i>
+                                    </a>
+                                    <a className="ms-3" target="blank" href="https://www.instagram.com/nahidthenh">
+                                        <i className="ri-instagram-line"></i>
+                                    </a>
+                                    <a className="ms-3" target="blank" href="https://www.github.com/nahidthenh">
+                                        <i className="ri-github-line"></i>
+                                    </a>
                                 </div>
                             </div>
                         </Col>
